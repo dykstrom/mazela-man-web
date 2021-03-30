@@ -1,0 +1,31 @@
+name: GitHub Pages
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  static-site:
+    runs-on: ubuntu-18.04
+    name: Build documentation
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+
+      - name: Build static site using Hugo
+        run: hugo --minify
+
+      - name: Deploy to GitHub pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/
+          
