@@ -18,7 +18,7 @@ random number generator.
 
 If you start the application now, it will begin by displaying the main menu.
 
-![Main Menu](https://fdelporte.github.io/mazela-man/images/09/main-menu.png)
+![Main Menu](https://dykstrom.github.io/mazela-man/images/09/main-menu.png)
 
 
 ### Counting Lives
@@ -126,7 +126,7 @@ can also do much more, like pausing the game engine or display a loading screen.
 
 Running the game again, and running out of lives, will now produce something like this:
 
-![Game Over](https://fdelporte.github.io/mazela-man/images/09/game-over.png)
+![Game Over](https://dykstrom.github.io/mazela-man/images/09/game-over.png)
 
 This is the end of this chapter. Now you can proceed to the 
-[next chapter](https://fdelporte.github.io/mazela-man/manual/10_end_of_tutorial/), which currently is the end of the tutorial.
+[next chapter](https://dykstrom.github.io/mazela-man/manual/10_end_of_tutorial/), which currently is the end of the tutorial.

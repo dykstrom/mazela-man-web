@@ -116,10 +116,10 @@ The game menu is accessed by pressing the Esc key while the game is running. Try
 then click Options and then Controls. This will display the sub menu for choosing key bindings
 and here you will see the action names we entered before.
 
-![Key Bindings](https://fdelporte.github.io/mazela-man/images/01/key-bindings.png)
+![Key Bindings](https://dykstrom.github.io/mazela-man/images/01/key-bindings.png)
 
 If you try the game as it is now, you soon find a major problem. The player can move through
 walls! In fact, it can even move off-screen. To solve this problem we will add physics and
-collisions in the [next chapter](https://fdelporte.github.io/mazela-man/manual/02_physics/).
+collisions in the [next chapter](https://dykstrom.github.io/mazela-man/manual/02_physics/).
 
-![Outside the Wall](https://fdelporte.github.io/mazela-man/images/01/outside-wall.png)
+![Outside the Wall](https://dykstrom.github.io/mazela-man/images/01/outside-wall.png)

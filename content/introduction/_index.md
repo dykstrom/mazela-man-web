@@ -8,7 +8,7 @@ weight: 5
 We start with a very basic app, the "Hello, World!" of FXGL. If you run this app,
 called `MazelaManApp`, you will be presented with a window similar to this.
 
-![Hello, FXGL!](https://fdelporte.github.io/mazela-man/images/00/hello-fxgl.png)
+![Hello, FXGL!](https://dykstrom.github.io/mazela-man/images/00/hello-fxgl.png)
 
 The first thing that happens here is that our main method calls `GameApplication.launch` 
 to start the app. After that, FXGL is in control, and makes callbacks to initialize
@@ -60,20 +60,20 @@ FXGL uses the Convention over Configuration paradigm, and expects resource files
 found in a certain folder structure. Let's start by creating that folder structure in the
 resources folder:
 
-![Folder Structure](https://fdelporte.github.io/mazela-man/images/00/folder-structure.png)
+![Folder Structure](https://dykstrom.github.io/mazela-man/images/00/folder-structure.png)
 
 ### Creating the Level File
 
 An easy way to get started is to copy an "empty" level file from the main resources
-folder to our newly created levels folder. Copy the level file from [here](https://fdelporte.github.io/mazela-man/resources/empty-level.tmx)
-and give it the name "level1.tmx". You also need to copy the [tilemap](https://fdelporte.github.io/mazela-man/resources/tilemap.png) 
+folder to our newly created levels folder. Copy the level file from [here](https://dykstrom.github.io/mazela-man/resources/empty-level.tmx)
+and give it the name "level1.tmx". You also need to copy the [tilemap](https://dykstrom.github.io/mazela-man/resources/tilemap.png) 
 file to the levels folder. The tilemap file is a PNG file that contains all the images (tiles) 
 that we will use when designing the level. The tilemap file we are going to use looks like this.
 
-![Tilemap File](https://fdelporte.github.io/mazela-man/resources/tilemap.png)
+![Tilemap File](https://dykstrom.github.io/mazela-man/resources/tilemap.png)
 
 If you do not have access to the Tiled application, or do not want to edit the level file yourself, 
-you can simply copy [the level file from the next chapter](https://fdelporte.github.io/mazela-man/01-chapter-1/src/main/resources/assets/levels/level1.tmx) 
+you can simply copy [the level file from the next chapter](https://dykstrom.github.io/mazela-man/01-chapter-1/src/main/resources/assets/levels/level1.tmx) 
 instead.
 
 
@@ -87,12 +87,12 @@ entities. In this step, we will have only one object or entity, and that is the 
 
 You can design your level any way you like, but mine looks like this:
 
-![Level Design](https://fdelporte.github.io/mazela-man/images/00/level-design.png)
+![Level Design](https://dykstrom.github.io/mazela-man/images/00/level-design.png)
 
 Notice the small square near the bottom of the image. That is the Player object! If you click on
 the Player object, the property editor on the left will display the properties of the Player object.
 
-![Player Object](https://fdelporte.github.io/mazela-man/images/00/player-object.png)
+![Player Object](https://dykstrom.github.io/mazela-man/images/00/player-object.png)
 
 Something important to notice about the Player object is the type, which must be "Player". That is
 how FXGL knows that it should spawn a Player entity when loading the level.
@@ -132,7 +132,7 @@ perimeter of the entity, and is used when detecting collisions between entities.
 
 Images that make up the visual part of an entity are called textures. We quickly realize that we 
 are now missing the "player.png" texture needed to make this work. Fortunately, we can copy 
-[player.png](https://fdelporte.github.io/mazela-man/resources/player.png) to the textures folder.
+[player.png](https://dykstrom.github.io/mazela-man/resources/player.png) to the textures folder.
 
 While in the entity factory, let's also add another spawn method, to create a black background for
 our game.
@@ -177,13 +177,13 @@ file to exist in a specific folder, namely "resources/assets/levels".
 
 If you run your application again, you will see something that looks like this.
 
-![Result](https://fdelporte.github.io/mazela-man/images/00/introduction-result.png)
+![Result](https://dykstrom.github.io/mazela-man/images/00/introduction-result.png)
 
 If you instead get an error message similar to below, you probably need to run Maven to copy
 the resources to the target folder. Note that you need to re-run Maven each time you have added
 new assets to the chapter you are working on.
 
-![Resource Error](https://fdelporte.github.io/mazela-man/images/00/resource-error.png)
+![Resource Error](https://dykstrom.github.io/mazela-man/images/00/resource-error.png)
 
 You can run Maven in your IDE, or on the command line. If you run from the command line, make 
 sure that the correct Java version is first in your path. Running Maven successfully will 
@@ -218,4 +218,4 @@ produce output similar to this:
 [INFO] ------------------------------------------------------------------------
 ```
 
-This concludes the introduction of the tutorial. Now you can proceed to [chapter 1](https://fdelporte.github.io/mazela-man/manual/01_handling_input/).
+This concludes the introduction of the tutorial. Now you can proceed to [chapter 1](https://dykstrom.github.io/mazela-man/manual/01_handling_input/).

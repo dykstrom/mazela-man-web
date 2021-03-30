@@ -40,11 +40,11 @@ Before we can do any animation, we must create sprite sheets to base the animati
 player character will be animated differently depending on the direction, so we need several 
 sprite sheets. These are the sprite sheets we will use:
 
-![Left](https://fdelporte.github.io/mazela-man/resources/player-left.png)
+![Left](https://dykstrom.github.io/mazela-man/resources/player-left.png)
 
-![Right](https://fdelporte.github.io/mazela-man/resources/player-right.png)
+![Right](https://dykstrom.github.io/mazela-man/resources/player-right.png)
 
-![Up and Down](https://fdelporte.github.io/mazela-man/resources/player-up-down.png)
+![Up and Down](https://dykstrom.github.io/mazela-man/resources/player-up-down.png)
 
 You can copy them from [here](../../static/resources) to the textures folder.
 
@@ -158,7 +158,7 @@ them from the input handlers. The input handler for the `A` key will now look li
 
 We get the `PlayerComponent` from the player entity and call the `left` method.
 
-![Animated Player](https://fdelporte.github.io/mazela-man/images/04/animated-player.png)
+![Animated Player](https://dykstrom.github.io/mazela-man/images/04/animated-player.png)
 
 Now we are done! The animation works as expected. However, since we now have a 
 `PlayerComponent`, we can refactor our code and move more of the player related code into the
@@ -213,4 +213,4 @@ The refactoring will make the `initInput` method look better again.
     }
 ```
 
-In the [next chapter](https://fdelporte.github.io/mazela-man/manual/05_adding_enemies/) we will add an enemy with simple AI.
+In the [next chapter](https://dykstrom.github.io/mazela-man/manual/05_adding_enemies/) we will add an enemy with simple AI.

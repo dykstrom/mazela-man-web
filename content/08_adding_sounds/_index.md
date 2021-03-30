@@ -43,4 +43,4 @@ player-pill collision handler as it looks with sound effects added:
 ```
 
 This was a short chapter, but then sound in FXGL is not very complicated. Now you can
-proceed to the [next chapter](https://fdelporte.github.io/mazela-man/manual/09_enable_main_menu/), where we enable the main menu.
+proceed to the [next chapter](https://dykstrom.github.io/mazela-man/manual/09_enable_main_menu/), where we enable the main menu.

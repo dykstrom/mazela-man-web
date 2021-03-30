@@ -1,4 +1,4 @@
-baseURL = "https://fdelporte.github.io/mazela-man/"
+baseURL = "https://dykstrom.github.io/mazela-man/"
 languageCode = "en-us"
 title = "Mazela-Man FXGL Tutorial"
 theme = "hugo-theme-learn"
@@ -100,5 +100,5 @@ home = ["HTML", "RSS", "JSON"]
 
 [[menu]]
 name = "Home"
-url = "https://fdelporte.github.io/mazela-man/"
+url = "https://dykstrom.github.io/mazela-man/"
 weight = 0
