@@ -11,7 +11,7 @@ very limited AI, and creating new collision handlers.
 ### Position Enemies on the Map
 
 We begin our work in Tiled as usual. It is also possible to copy the finished 
-[level file](https://dykstrom.github.io/mazela-man-web/06-chapter-6/src/main/resources/assets/levels/level1.tmx) from the next level
+[level file](https://dykstrom.github.io/mazela-man/06-chapter-6/src/main/resources/assets/levels/level1.tmx) from the next level
 as usual. Otherwise, open the level file for the current chapter in Tiled, and add an enemy
 object. You can of course add any number of enemies, but I will settle for one, given the
 design of my level.
