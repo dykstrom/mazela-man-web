@@ -24,7 +24,7 @@ The Player object is the highlighted object close to the bottom.
 
 If you added any new ghosts to the new level, you will have to copy the textures for
 them to the textures folder. All available resources can be found in the main 
-[resources](../../static/resources) folder. I added "pinky", who looks like this:
+[resources](https://github.com/dykstrom/mazela-man/tree/main/resources) folder. I added "pinky", who looks like this:
 
 ![Pinky Left](https://dykstrom.github.io/mazela-man-web/resources/pinky-left.png)
 ![Pinky Right](https://dykstrom.github.io/mazela-man-web/resources/pinky-right.png)
