@@ -8,7 +8,7 @@ As of now, they are only images, and not entities. To fix this we are going to c
 for the walls in Tiled.
 
 As before, if you don't want to use Tiled, you can copy the level file from the 
-[next chapter](https://dykstrom.github.io/mazela-man/03-chapter-3/src/main/resources/assets/levels/level1.tmx). The tilemap is
+[next chapter](https://github.com/dykstrom/mazela-man/blob/main/03-chapter-3/src/main/resources/assets/levels/level1.tmx). The tilemap is
 still the same.
 
 Start Tiled and open the level file for the current chapter. Select the Object Layer in the 

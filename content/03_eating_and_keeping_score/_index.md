@@ -6,7 +6,7 @@ weight: 30
 In this chapter, we will add pills for the player to eat, handle collisions to know when a pill
 has been eaten, keep a score of the pills eaten, and display this score in the UI. We start as
 usual, in the Tiled editor. A new version of the level file, with pills added, can be copied
-from [here](https://dykstrom.github.io/mazela-man/04-chapter-4/src/main/resources/assets/levels/level1.tmx).
+from [here](https://github.com/dykstrom/mazela-man/blob/main/04-chapter-4/src/main/resources/assets/levels/level1.tmx).
 
 
 ### Adding Pills
