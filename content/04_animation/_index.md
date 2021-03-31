@@ -46,7 +46,7 @@ sprite sheets. These are the sprite sheets we will use:
 
 ![Up and Down](https://dykstrom.github.io/mazela-man-web/resources/player-up-down.png)
 
-You can copy them from [here](../../static/resources) to the textures folder.
+You can copy them from [here](https://github.com/dykstrom/mazela-man/tree/main/resources) to the textures folder.
 
 
 ### AnimatedTexture
