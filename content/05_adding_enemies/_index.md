@@ -303,5 +303,5 @@ can get the closest entity to a point, or all entities within an area. You can a
 all entities that satisfy a predicate. All depends on the type of game you are working 
 on.
 
-That's all for this chapter. In the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/06_second_level/) we will add 
+That's all for this chapter. In the [next chapter](https://dykstrom.github.io/mazela-man-web/06_second_level/) we will add 
 a second level to the game.

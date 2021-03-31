@@ -11,7 +11,7 @@ visible for ten seconds before they disappear.
 
 As usual, we start in Tiled. This time, you need to edit both level 1 and level 2, and
 any additional levels you may have created. Or you can copy the level files from the
-[next chapter](https://dykstrom.github.io/mazela-man-web/manual/08_adding_sound/). We will not add any
+[next chapter](https://dykstrom.github.io/mazela-man-web/08_adding_sound/). We will not add any
 cherries, but rather cherry spawn-points to the level files. The spawn-points will
 exist through the whole level even though the spawned cherries will not. I added 
 spawn-points in the corners of the level 1 maze, and set the type string to 
@@ -123,5 +123,5 @@ unnecessary to state it here, but anyway, here it is:
 
 ![Game with Cherries](https://dykstrom.github.io/mazela-man-web/images/07/cherries-live.png)
 
-This completes this chapter. Move on to the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/08_adding_sound/)
+This completes this chapter. Move on to the [next chapter](https://dykstrom.github.io/mazela-man-web/08_adding_sound/)
 where we will add sound to the game.

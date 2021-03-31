@@ -213,4 +213,4 @@ The refactoring will make the `initInput` method look better again.
     }
 ```
 
-In the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/05_adding_enemies/) we will add an enemy with simple AI.
+In the [next chapter](https://dykstrom.github.io/mazela-man-web/05_adding_enemies/) we will add an enemy with simple AI.

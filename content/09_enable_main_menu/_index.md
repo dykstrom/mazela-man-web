@@ -129,4 +129,4 @@ Running the game again, and running out of lives, will now produce something lik
 ![Game Over](https://dykstrom.github.io/mazela-man-web/images/09/game-over.png)
 
 This is the end of this chapter. Now you can proceed to the 
-[next chapter](https://dykstrom.github.io/mazela-man-web/manual/10_end_of_tutorial/), which currently is the end of the tutorial.
+[next chapter](https://dykstrom.github.io/mazela-man-web/10_end_of_tutorial/), which currently is the end of the tutorial.

@@ -218,4 +218,4 @@ produce output similar to this:
 [INFO] ------------------------------------------------------------------------
 ```
 
-This concludes the introduction of the tutorial. Now you can proceed to [chapter 1](https://dykstrom.github.io/mazela-man-web/manual/01_handling_input/).
+This concludes the introduction of the tutorial. Now you can proceed to [chapter 1](https://dykstrom.github.io/mazela-man-web/01_handling_input/).

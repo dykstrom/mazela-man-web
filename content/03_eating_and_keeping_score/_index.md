@@ -140,4 +140,4 @@ should be displayed in the top left of the window.
 
 ![Game with Score](https://dykstrom.github.io/mazela-man-web/images/03/game-with-score.png)
 
-In the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/04_animation/) we will add animation to the game.
+In the [next chapter](https://dykstrom.github.io/mazela-man-web/04_animation/) we will add animation to the game.

@@ -146,5 +146,5 @@ When we run the game again, we can see that the player continues moving in the s
 until it is stopped by a wall. That is because there is no friction, and no gravity affecting 
 it.
 
-This is the end of chapter 2. In the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/03_eating_and_keeping_score/) we will make
+This is the end of chapter 2. In the [next chapter](https://dykstrom.github.io/mazela-man-web/03_eating_and_keeping_score/) we will make
 the game a bit more interesting by adding something for the player to eat.

@@ -127,10 +127,10 @@ technique is used when working with events in JavaFX applications.
 
 The observant reader has by now figured out that the game will crash when the player
 has made it through level 2. Don't worry! We will fix that issue in 
-[chapter 9](https://dykstrom.github.io/mazela-man-web/manual/09_enable_main_menu/).
+[chapter 9](https://dykstrom.github.io/mazela-man-web/09_enable_main_menu/).
 
 Adding a new level is done. This is how my level design look in action.
 
 ![Level 2 Live](https://dykstrom.github.io/mazela-man-web/images/06/level2-live.png)
 
-Now proceed to the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/07_bonus_points/)
+Now proceed to the [next chapter](https://dykstrom.github.io/mazela-man-web/07_bonus_points/)
