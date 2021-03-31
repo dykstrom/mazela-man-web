@@ -11,28 +11,28 @@ very limited AI, and creating new collision handlers.
 ### Position Enemies on the Map
 
 We begin our work in Tiled as usual. It is also possible to copy the finished 
-[level file](https://dykstrom.github.io/mazela-man/06-chapter-6/src/main/resources/assets/levels/level1.tmx) from the next level
+[level file](https://dykstrom.github.io/mazela-man-web/06-chapter-6/src/main/resources/assets/levels/level1.tmx) from the next level
 as usual. Otherwise, open the level file for the current chapter in Tiled, and add an enemy
 object. You can of course add any number of enemies, but I will settle for one, given the
 design of my level.
 
-![Blinky](https://dykstrom.github.io/mazela-man/images/05/tiled-blinky.png)
+![Blinky](https://dykstrom.github.io/mazela-man-web/images/05/tiled-blinky.png)
 
 The new object has a little name tag above it. The enemy objects need names to keep them 
 apart. We will use the name later when loading textures for the enemy entity. You enter the
 name, as well as the type, in the Tiled property editor. For reasons unknown, I have chosen 
 to call this object "blinky".
 
-![Blinky Properties](https://dykstrom.github.io/mazela-man/images/05/blinky-properties.png)
+![Blinky Properties](https://dykstrom.github.io/mazela-man-web/images/05/blinky-properties.png)
 
 
 ### Adding Images
 
 The images we will use for enemy blinky look like this:
 
-![Left](https://dykstrom.github.io/mazela-man/resources/blinky-left.png)
-![Right](https://dykstrom.github.io/mazela-man/resources/blinky-right.png)
-![Up-Down](https://dykstrom.github.io/mazela-man/resources/blinky-up-down.png)
+![Left](https://dykstrom.github.io/mazela-man-web/resources/blinky-left.png)
+![Right](https://dykstrom.github.io/mazela-man-web/resources/blinky-right.png)
+![Up-Down](https://dykstrom.github.io/mazela-man-web/resources/blinky-up-down.png)
 
 Copy them to the textures folder from the main [resources](../../static/resources) folder. If you 
 want more than one enemy, we have you covered. The resources folder also contains images
@@ -95,7 +95,7 @@ public class GhostComponent extends Component {
 
 Running the game now will provide us with a nice, albeit very static enemy.
 
-![Static Blinky](https://dykstrom.github.io/mazela-man/images/05/static-blinky.png)
+![Static Blinky](https://dykstrom.github.io/mazela-man-web/images/05/static-blinky.png)
 
 
 ### Adding AI
@@ -132,7 +132,7 @@ happens in the game, and depending on when the Java just-in-time compiler kicks 
 Now our enemy will move, but only in one direction, and as the player before, it will move
 through the walls.
 
-![Blinky Outside](https://dykstrom.github.io/mazela-man/images/05/blinky-outside.png)
+![Blinky Outside](https://dykstrom.github.io/mazela-man-web/images/05/blinky-outside.png)
 
 
 ### Collision Detection
@@ -303,5 +303,5 @@ can get the closest entity to a point, or all entities within an area. You can a
 all entities that satisfy a predicate. All depends on the type of game you are working 
 on.
 
-That's all for this chapter. In the [next chapter](https://dykstrom.github.io/mazela-man/manual/06_second_level/) we will add 
+That's all for this chapter. In the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/06_second_level/) we will add 
 a second level to the game.

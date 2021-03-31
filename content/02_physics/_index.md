@@ -8,7 +8,7 @@ As of now, they are only images, and not entities. To fix this we are going to c
 for the walls in Tiled.
 
 As before, if you don't want to use Tiled, you can copy the level file from the 
-[next chapter](https://dykstrom.github.io/mazela-man/03-chapter-3/src/main/resources/assets/levels/level1.tmx). The tilemap is
+[next chapter](https://dykstrom.github.io/mazela-man-web/03-chapter-3/src/main/resources/assets/levels/level1.tmx). The tilemap is
 still the same.
 
 Start Tiled and open the level file for the current chapter. Select the Object Layer in the 
@@ -18,12 +18,12 @@ to "Snap to pixels" in View-->Snapping.
 
 Here is a closeup of a part of my level including objects for the walls.
 
-![Wall Objects](https://dykstrom.github.io/mazela-man/images/02/wall-objects.png)
+![Wall Objects](https://dykstrom.github.io/mazela-man-web/images/02/wall-objects.png)
 
 Note that you need to set the type string of all wall objects to "Wall" in the property editor.
 This type string will again be used in the entity factory to spawn the correct entity.
 
-![Wall Properties](https://dykstrom.github.io/mazela-man/images/02/wall-properties.png)
+![Wall Properties](https://dykstrom.github.io/mazela-man-web/images/02/wall-properties.png)
 
 Remember to save the level file when you are done with the walls.
 
@@ -146,5 +146,5 @@ When we run the game again, we can see that the player continues moving in the s
 until it is stopped by a wall. That is because there is no friction, and no gravity affecting 
 it.
 
-This is the end of chapter 2. In the [next chapter](https://dykstrom.github.io/mazela-man/manual/03_eating_and_keeping_score/) we will make
+This is the end of chapter 2. In the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/03_eating_and_keeping_score/) we will make
 the game a bit more interesting by adding something for the player to eat.

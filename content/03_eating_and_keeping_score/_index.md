@@ -6,7 +6,7 @@ weight: 30
 In this chapter, we will add pills for the player to eat, handle collisions to know when a pill
 has been eaten, keep a score of the pills eaten, and display this score in the UI. We start as
 usual, in the Tiled editor. A new version of the level file, with pills added, can be copied
-from [here](https://dykstrom.github.io/mazela-man/04-chapter-4/src/main/resources/assets/levels/level1.tmx).
+from [here](https://dykstrom.github.io/mazela-man-web/04-chapter-4/src/main/resources/assets/levels/level1.tmx).
 
 
 ### Adding Pills
@@ -18,7 +18,7 @@ objects to "Pill". As you already know by now, we will use that string in the en
 
 This is how my level looks in Tiled after adding all the pills.
 
-![Pill Objects](https://dykstrom.github.io/mazela-man/images/03/pill-objects.png)
+![Pill Objects](https://dykstrom.github.io/mazela-man-web/images/03/pill-objects.png)
 
 In the entity factory, we add the corresponding spawn method.
 
@@ -36,7 +36,7 @@ In the entity factory, we add the corresponding spawn method.
 ```
 
 We need to create a new enum constant in `EntityType`, and we need to copy the pill image to the
-textures folder from [here](https://dykstrom.github.io/mazela-man/resources/pill.png).
+textures folder from [here](https://dykstrom.github.io/mazela-man-web/resources/pill.png).
 
 This time we don't create the bounding box automatically from the image. That is because the 
 image is 20x20 pixels, but the actual pill is only 9x9 pixels. To make the collision look 
@@ -138,6 +138,6 @@ sync, no event handling. JavaFX does it all for you.
 If you run the application again, the maze should be filled with pills, and the score
 should be displayed in the top left of the window.
 
-![Game with Score](https://dykstrom.github.io/mazela-man/images/03/game-with-score.png)
+![Game with Score](https://dykstrom.github.io/mazela-man-web/images/03/game-with-score.png)
 
-In the [next chapter](https://dykstrom.github.io/mazela-man/manual/04_animation/) we will add animation to the game.
+In the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/04_animation/) we will add animation to the game.

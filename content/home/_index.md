@@ -45,20 +45,20 @@ or you can do it on the command line, and then open the tutorial as a Maven proj
 
 ## Getting Started
 
-The best way to start is [from the beginning](https://dykstrom.github.io/mazela-man/manual/).
+The best way to start is [from the beginning](https://dykstrom.github.io/mazela-man-web/manual/).
 
 You can also jump directly to a specific chapter:
 
-* [01 Handling Input](https://dykstrom.github.io/mazela-man/manual/01_handling_input/)
-* [02 Physics](https://dykstrom.github.io/mazela-man/manual/02_physics/)
-* [03 Keeping Score](https://dykstrom.github.io/mazela-man/manual/03_eating_and_keeping_score/)
-* [04 Animation](https://dykstrom.github.io/mazela-man/manual/04_animation/)
-* [05 Adding Enemies](https://dykstrom.github.io/mazela-man/manual/05_adding_enemies/)
-* [06 Multiple Levels](https://dykstrom.github.io/mazela-man/manual/06_second_level/)
-* [07 Bonus Points](https://dykstrom.github.io/mazela-man/manual/07_bonus_points/)
-* [08 Adding Sound](https://dykstrom.github.io/mazela-man/manual/08_adding_sound/)
-* [09 Main Menu](https://dykstrom.github.io/mazela-man/manual/09_enable_main_menu/)
-* [10 Conclusion](https://dykstrom.github.io/mazela-man/manual/10_end_of_tutorial/)
+* [01 Handling Input](https://dykstrom.github.io/mazela-man-web/manual/01_handling_input/)
+* [02 Physics](https://dykstrom.github.io/mazela-man-web/manual/02_physics/)
+* [03 Keeping Score](https://dykstrom.github.io/mazela-man-web/manual/03_eating_and_keeping_score/)
+* [04 Animation](https://dykstrom.github.io/mazela-man-web/manual/04_animation/)
+* [05 Adding Enemies](https://dykstrom.github.io/mazela-man-web/manual/05_adding_enemies/)
+* [06 Multiple Levels](https://dykstrom.github.io/mazela-man-web/manual/06_second_level/)
+* [07 Bonus Points](https://dykstrom.github.io/mazela-man-web/manual/07_bonus_points/)
+* [08 Adding Sound](https://dykstrom.github.io/mazela-man-web/manual/08_adding_sound/)
+* [09 Main Menu](https://dykstrom.github.io/mazela-man-web/manual/09_enable_main_menu/)
+* [10 Conclusion](https://dykstrom.github.io/mazela-man-web/manual/10_end_of_tutorial/)
 
 
 ## Glossary

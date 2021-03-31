@@ -15,10 +15,10 @@ Redesign the maze in any way you like, position the player, the ghost(s), and th
 by creating objects with type and name. Name the new level file "level2.tmx".
 
 If you don't feel like doing all that work in Tiled, you can copy a ready-made
-[level2.tmx](https://dykstrom.github.io/mazela-man/07-chapter-7/src/main/resources/assets/levels/level2.tmx) file. The maze
+[level2.tmx](https://dykstrom.github.io/mazela-man-web/07-chapter-7/src/main/resources/assets/levels/level2.tmx) file. The maze
 in this file looks like this:
 
-![Level 2](https://dykstrom.github.io/mazela-man/images/06/level2.png)
+![Level 2](https://dykstrom.github.io/mazela-man-web/images/06/level2.png)
 
 The Player object is the highlighted object close to the bottom.
 
@@ -26,9 +26,9 @@ If you added any new ghosts to the new level, you will have to copy the textures
 them to the textures folder. All available resources can be found in the main 
 [resources](../../static/resources) folder. I added "pinky", who looks like this:
 
-![Pinky Left](https://dykstrom.github.io/mazela-man/resources/pinky-left.png)
-![Pinky Right](https://dykstrom.github.io/mazela-man/resources/pinky-right.png)
-![Pinky UpDown](https://dykstrom.github.io/mazela-man/resources/pinky-up-down.png)
+![Pinky Left](https://dykstrom.github.io/mazela-man-web/resources/pinky-left.png)
+![Pinky Right](https://dykstrom.github.io/mazela-man-web/resources/pinky-right.png)
+![Pinky UpDown](https://dykstrom.github.io/mazela-man-web/resources/pinky-up-down.png)
 
 
 ### Start Level
@@ -127,10 +127,10 @@ technique is used when working with events in JavaFX applications.
 
 The observant reader has by now figured out that the game will crash when the player
 has made it through level 2. Don't worry! We will fix that issue in 
-[chapter 9](https://dykstrom.github.io/mazela-man/manual/09_enable_main_menu/).
+[chapter 9](https://dykstrom.github.io/mazela-man-web/manual/09_enable_main_menu/).
 
 Adding a new level is done. This is how my level design look in action.
 
-![Level 2 Live](https://dykstrom.github.io/mazela-man/images/06/level2-live.png)
+![Level 2 Live](https://dykstrom.github.io/mazela-man-web/images/06/level2-live.png)
 
-Now proceed to the [next chapter](https://dykstrom.github.io/mazela-man/manual/07_bonus_points/)
+Now proceed to the [next chapter](https://dykstrom.github.io/mazela-man-web/manual/07_bonus_points/)
