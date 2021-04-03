@@ -70,10 +70,10 @@ for each sprite sheet.
 In the `PlayerComponent constructor we create these objects.
 
 ```java
-        left = new AnimationChannel(FXGL.image("player-left.png"), Duration.seconds(0.5), 6);
-        right = new AnimationChannel(FXGL.image("player-right.png"), Duration.seconds(0.5), 6);
-        upDown = new AnimationChannel(FXGL.image("player-up-down.png"), Duration.seconds(0.5), 6);
-        texture = new AnimatedTexture(upDown);
+    left = new AnimationChannel(FXGL.image("player-left.png"), Duration.seconds(0.5), 6);
+    right = new AnimationChannel(FXGL.image("player-right.png"), Duration.seconds(0.5), 6);
+    upDown = new AnimationChannel(FXGL.image("player-up-down.png"), Duration.seconds(0.5), 6);
+    texture = new AnimatedTexture(upDown);
 ```
 
 Each animation channel is created with its sprite sheet image, a value that specifies the 
@@ -150,10 +150,10 @@ Of course, nothing at all will happen if we don't call these new methods. We nee
 them from the input handlers. The input handler for the `A` key will now look like:
 
 ```java
-        FXGL.onKey(KeyCode.A, "Move Left", () -> {
-            getPlayer().getComponent(PhysicsComponent.class).setVelocityX(-SPEED);
-            getPlayer().getComponent(PlayerComponent.class).left();
-        });
+    FXGL.onKey(KeyCode.A, "Move Left", () -> {
+        getPlayer().getComponent(PhysicsComponent.class).setVelocityX(-SPEED);
+        getPlayer().getComponent(PlayerComponent.class).left();
+    });
 ```
 
 We get the `PlayerComponent` from the player entity and call the `left` method.

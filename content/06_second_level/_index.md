@@ -15,7 +15,7 @@ Redesign the maze in any way you like, position the player, the ghost(s), and th
 by creating objects with type and name. Name the new level file "level2.tmx".
 
 If you don't feel like doing all that work in Tiled, you can copy a ready-made
-[level2.tmx](https://github.com/dykstrom/mazela-man/blob/main/07-chapter-7/src/main/resources/assets/levels/level2.tmx) file. The maze
+[level2.tmx](https://github.com/dykstrom/mazela-man/blob/main/07-chapter-7/src/main/resources/assets/levels) file. The maze
 in this file looks like this:
 
 ![Level 2](https://dykstrom.github.io/mazela-man-web/images/06/level2.png)

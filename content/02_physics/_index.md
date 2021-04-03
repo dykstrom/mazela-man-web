@@ -8,7 +8,7 @@ As of now, they are only images, and not entities. To fix this we are going to c
 for the walls in Tiled.
 
 As before, if you don't want to use Tiled, you can copy the level file from the 
-[next chapter](https://github.com/dykstrom/mazela-man/blob/main/03-chapter-3/src/main/resources/assets/levels/level1.tmx). The tilemap is
+[next chapter](https://github.com/dykstrom/mazela-man/blob/main/03-chapter-3/src/main/resources/assets/levels). The tilemap is
 still the same.
 
 Start Tiled and open the level file for the current chapter. Select the Object Layer in the 
@@ -113,7 +113,7 @@ player entity.
 The physics world is ruled by forces, and one of the forces that is usually present is
 gravity. However, we don't want any gravity in this game, so we will set it to zero. We can
 initialize the physics world by overriding yet another method from `GameApplication`, this time
-the method `initPhysics (surprise, surprise). We set the gravity both horizontally and 
+the method `initPhysics` (surprise, surprise). We set the gravity both horizontally and 
 vertically to zero. Later, you can try setting it to something else, and observe the force 
 of gravity.
 

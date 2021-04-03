@@ -11,7 +11,7 @@ very limited AI, and creating new collision handlers.
 ### Position Enemies on the Map
 
 We begin our work in Tiled as usual. It is also possible to copy the finished 
-[level file](https://github.com/dykstrom/mazela-man/blob/main/06-chapter-6/src/main/resources/assets/levels/level1.tmx) from the next level
+[level file](https://github.com/dykstrom/mazela-man/blob/main/06-chapter-6/src/main/resources/assets/levels) from the next level
 as usual. Otherwise, open the level file for the current chapter in Tiled, and add an enemy
 object. You can of course add any number of enemies, but I will settle for one, given the
 design of my level.
@@ -34,7 +34,7 @@ The images we will use for enemy blinky look like this:
 ![Right](https://dykstrom.github.io/mazela-man-web/resources/blinky-right.png)
 ![Up-Down](https://dykstrom.github.io/mazela-man-web/resources/blinky-up-down.png)
 
-Copy them to the textures folder from the main [resources](../../static/resources) folder. If you 
+Copy them to the textures folder from the main [resources](https://github.com/dykstrom/mazela-man/tree/main/resources) folder. If you 
 want more than one enemy, we have you covered. The resources folder also contains images
 for pinky, inky, and clyde.
 
@@ -155,12 +155,12 @@ to the `spawnWall` method fixes that.
 Next, we add a collision handler for a ghost and a wall. In `initPhysics`, we add:
 
 ```java
-        physics.addCollisionHandler(new CollisionHandler(EntityType.GHOST, EntityType.WALL) {
-            @Override
-            protected void onCollisionBegin(Entity ghost, Entity wall) {
-                ghost.getComponent(GhostComponent.class).turn();
-            }
-        });
+    physics.addCollisionHandler(new CollisionHandler(EntityType.GHOST, EntityType.WALL) {
+        @Override
+        protected void onCollisionBegin(Entity ghost, Entity wall) {
+            ghost.getComponent(GhostComponent.class).turn();
+        }
+    });
 ```
 
 Again, the order of the constructor arguments to `CollisionHandler` decides the order of the
@@ -285,15 +285,15 @@ The final step is adding a collision handler that handles player-ghost collision
 `initPhysics` we add:
 
 ```java
-        physics.addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.GHOST) {
-            @Override
-            protected void onCollisionBegin(Entity player, Entity ghost) {
-                FXGL.getGameWorld()
-                        .getEntitiesByType(EntityType.GHOST)
-                        .forEach(entity -> entity.getComponent(GhostComponent.class).respawn());
-                player.getComponent(PlayerComponent.class).respawn();
-            }
-        });
+    physics.addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.GHOST) {
+        @Override
+        protected void onCollisionBegin(Entity player, Entity ghost) {
+        FXGL.getGameWorld()
+                    .getEntitiesByType(EntityType.GHOST)
+                    .forEach(entity -> entity.getComponent(GhostComponent.class).respawn());
+            player.getComponent(PlayerComponent.class).respawn();
+        }
+    });
 ```
 
 In this collision handler we respawn not only the ghost that collided, but _all_ ghosts, 

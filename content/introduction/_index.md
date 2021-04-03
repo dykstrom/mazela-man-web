@@ -73,7 +73,7 @@ that we will use when designing the level. The tilemap file we are going to use 
 ![Tilemap File](https://dykstrom.github.io/mazela-man-web/resources/tilemap.png)
 
 If you do not have access to the Tiled application, or do not want to edit the level file yourself, 
-you can simply copy [the level file from the next chapter](https://github.com/dykstrom/mazela-man/blob/main/01-chapter-1/src/main/resources/assets/levels/level1.tmx) 
+you can simply copy [the level file from the next chapter](https://github.com/dykstrom/mazela-man/blob/main/01-chapter-1/src/main/resources/assets/levels) 
 instead.
 
 

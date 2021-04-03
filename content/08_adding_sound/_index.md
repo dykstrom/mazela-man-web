@@ -14,7 +14,7 @@ retrieve a reference to the audio player using `FXGL.getAudioPlayer`.
 ### Sound Assets
 
 The sound assets belong in the folder "assets/sounds". There are a number of sound assets
-to copy from the main [resources](../../static/resources) folder:
+to copy from the main [resources](https://github.com/dykstrom/mazela-man/tree/main/resources) folder:
 
 * cherry.wav - when eating a cherry
 * death.wav - when colliding with a ghost

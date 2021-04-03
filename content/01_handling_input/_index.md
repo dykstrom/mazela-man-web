@@ -1,5 +1,5 @@
 ---
-title: 01. Handling input
+title: 01. Handling Input
 weight: 10
 ---
 
