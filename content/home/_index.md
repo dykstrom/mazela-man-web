@@ -11,16 +11,20 @@ but you don't need to know JavaFX to follow the tutorial. We will use version 11
 
 The tutorial is divided into a number of chapters that each introduces a new part of the game,
 and usually a new part of FXGL. Each chapter builds on the previous, so it's advisable to read
-and execute them in order. Each chapter is also a Maven module that contains the code for the
-game as it is at the beginning of the chapter, and a README file that describes the steps to
-perform in the chapter. Following the tutorial closely will result in code that looks like the
+and execute them in order. The tutorial is accompanied by a Maven project with one module per 
+chapter, each containing the code for the game as it is at the beginning of the chapter. The
+Maven project can be found in repository [mazela-man](https://github.com/dykstrom/mazela-man).
+Following the tutorial closely will result in code that looks like the
 code contained in the following chapter. Experimentation is encouraged, but if you lose your
 way in the process, you can always start over with a working code base in the following chapter.
 
 All resources used in the tutorial, and a few extras, can be found [here](https://github.com/dykstrom/mazela-man/tree/main/resources).
 
+
 ## Requirements
 
+If you are content with just reading through the tutorial, you can start right away, but if you
+also want to write code and run the game, you need to install some software on your computer. 
 The following pieces of software are needed to follow the tutorial:
 
 * [Java 11](https://adoptopenjdk.net). FXGL version 11.13 requires Java 11 or later.
