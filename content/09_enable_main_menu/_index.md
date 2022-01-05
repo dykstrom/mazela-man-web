@@ -77,7 +77,7 @@ Instead of calling `setLevelFromMap` directly from `initLevel`, we call a new me
 ```java
     private void initLevel() {
         FXGL.spawn("Background", new SpawnData(0, 0).put("width", WIDTH).put("height", HEIGHT));
-        FXGL.setLevelFromMapOrGameOver();
+        setLevelFromMapOrGameOver();
         // Store the number of pills on this level
         FXGL.set("pills", FXGL.getGameWorld().getEntitiesByType(EntityType.PILL).size());
     }
@@ -86,7 +86,7 @@ Instead of calling `setLevelFromMap` directly from `initLevel`, we call a new me
 ```java
     private void setLevelFromMapOrGameOver() {
         try {
-            setLevelFromMap("level" + FXGL.geti("level") + ".tmx");
+            FXGL.setLevelFromMap("level" + FXGL.geti("level") + ".tmx");
         } catch (IllegalArgumentException e) {
             gameOver(true);
         }
