@@ -1,26 +1,173 @@
-<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.82.0"><meta name=description content="Tutorial website for FXGL"><meta name=author content="Mazela-Man"><link rel=icon href=/mazela-man-web/assets/favicon.ico type=image/ico><title>09. Enable Main Menu - Mazela-Man FXGL Tutorial</title><link href=/mazela-man-web/css/nucleus.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/fontawesome-all.min.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/hybrid.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/featherlight.min.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/perfect-scrollbar.min.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/auto-complete.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/atom-one-dark-reasonable.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/theme.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/hugo-theme.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/theme-red.css?1617459080 rel=stylesheet><script src=/mazela-man-web/js/jquery-3.3.1.min.js?1617459080></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/mazela-man-web/09_enable_main_menu/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=https://dykstrom.github.io/mazela-man-web/home/><img src=https://dykstrom.github.io/mazela-man-web/images/07/cherries-live.png></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<!doctype html><html lang=en class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.91.2">
+<meta name=description content="Tutorial website for FXGL">
+<meta name=author content="Mazela-Man">
+<link rel=icon href=/mazela-man-web/assets/favicon.ico type=image/ico>
+<title>09. Enable Main Menu - Mazela-Man FXGL Tutorial</title>
+<link href=/mazela-man-web/css/nucleus.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/fontawesome-all.min.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/hybrid.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/featherlight.min.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/perfect-scrollbar.min.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/auto-complete.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/atom-one-dark-reasonable.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/theme.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/hugo-theme.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/theme-red.css?1641396862 rel=stylesheet>
+<script src=/mazela-man-web/js/jquery-3.3.1.min.js?1641396862></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/mazela-man-web/09_enable_main_menu/>
+<nav id=sidebar>
+<div id=header-wrapper>
+<div id=header>
+<a id=logo href=https://dykstrom.github.io/mazela-man-web/home/>
+<img src=https://dykstrom.github.io/mazela-man-web/images/07/cherries-live.png>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/mazela-man-web/js/lunr.min.js?1617459080></script><script type=text/javascript src=/mazela-man-web/js/auto-complete.js?1617459080></script><script type=text/javascript>var baseurl="https://dykstrom.github.io/mazela-man-web/"</script><script type=text/javascript src=/mazela-man-web/js/search.js?1617459080></script></div><div class=highlightable><ul class=topics><li data-nav-id=/mazela-man-web/home/ title=Mazela-Man class=dd-item><a href=/mazela-man-web/home/>Mazela-Man</a></li><li data-nav-id=/mazela-man-web/introduction/ title=Introduction class=dd-item><a href=/mazela-man-web/introduction/>Introduction</a></li><li data-nav-id=/mazela-man-web/01_handling_input/ title="01. Handling Input" class=dd-item><a href=/mazela-man-web/01_handling_input/>01. Handling Input</a></li><li data-nav-id=/mazela-man-web/02_physics/ title="02. Physics" class=dd-item><a href=/mazela-man-web/02_physics/>02. Physics</a></li><li data-nav-id=/mazela-man-web/03_eating_and_keeping_score/ title="03. Eating and Keeping Score" class=dd-item><a href=/mazela-man-web/03_eating_and_keeping_score/>03. Eating and Keeping Score</a></li><li data-nav-id=/mazela-man-web/04_animation/ title="04. Animation" class=dd-item><a href=/mazela-man-web/04_animation/>04. Animation</a></li><li data-nav-id=/mazela-man-web/05_adding_enemies/ title="05. Adding Enemies" class=dd-item><a href=/mazela-man-web/05_adding_enemies/>05. Adding Enemies</a></li><li data-nav-id=/mazela-man-web/06_second_level/ title="06. A Second Level" class=dd-item><a href=/mazela-man-web/06_second_level/>06. A Second Level</a></li><li data-nav-id=/mazela-man-web/07_bonus_points/ title="07. Bonus Points" class=dd-item><a href=/mazela-man-web/07_bonus_points/>07. Bonus Points</a></li><li data-nav-id=/mazela-man-web/08_adding_sound/ title="08. Adding Sound" class=dd-item><a href=/mazela-man-web/08_adding_sound/>08. Adding Sound</a></li><li data-nav-id=/mazela-man-web/09_enable_main_menu/ title="09. Enable Main Menu" class="dd-item
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/mazela-man-web/js/lunr.min.js?1641396862></script>
+<script type=text/javascript src=/mazela-man-web/js/auto-complete.js?1641396862></script>
+<script type=text/javascript>var baseurl="https://dykstrom.github.io/mazela-man-web/"</script>
+<script type=text/javascript src=/mazela-man-web/js/search.js?1641396862></script>
+</div>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/mazela-man-web/home/ title=Mazela-Man class=dd-item>
+<a href=/mazela-man-web/home/>
+Mazela-Man
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/introduction/ title=Introduction class=dd-item>
+<a href=/mazela-man-web/introduction/>
+Introduction
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/01_handling_input/ title="01. Handling Input" class=dd-item>
+<a href=/mazela-man-web/01_handling_input/>
+01. Handling Input
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/02_physics/ title="02. Physics" class=dd-item>
+<a href=/mazela-man-web/02_physics/>
+02. Physics
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/03_eating_and_keeping_score/ title="03. Eating and Keeping Score" class=dd-item>
+<a href=/mazela-man-web/03_eating_and_keeping_score/>
+03. Eating and Keeping Score
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/04_animation/ title="04. Animation" class=dd-item>
+<a href=/mazela-man-web/04_animation/>
+04. Animation
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/05_adding_enemies/ title="05. Adding Enemies" class=dd-item>
+<a href=/mazela-man-web/05_adding_enemies/>
+05. Adding Enemies
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/06_second_level/ title="06. A Second Level" class=dd-item>
+<a href=/mazela-man-web/06_second_level/>
+06. A Second Level
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/07_bonus_points/ title="07. Bonus Points" class=dd-item>
+<a href=/mazela-man-web/07_bonus_points/>
+07. Bonus Points
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/08_adding_sound/ title="08. Adding Sound" class=dd-item>
+<a href=/mazela-man-web/08_adding_sound/>
+08. Adding Sound
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/09_enable_main_menu/ title="09. Enable Main Menu" class="dd-item
 parent
-active"><a href=/mazela-man-web/09_enable_main_menu/>09. Enable Main Menu</a></li><li data-nav-id=/mazela-man-web/10_end_of_tutorial/ title="10. End of Tutorial" class=dd-item><a href=/mazela-man-web/10_end_of_tutorial/>10. End of Tutorial</a></li></ul><section id=footer><p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
+active">
+<a href=/mazela-man-web/09_enable_main_menu/>
+09. Enable Main Menu
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/10_end_of_tutorial/ title="10. End of Tutorial" class=dd-item>
+<a href=/mazela-man-web/10_end_of_tutorial/>
+10. End of Tutorial
+</a>
+</li>
+</ul>
+<section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
-<span class=links><a href=/mazela-man-web/>Home</a> > 09. Enable Main Menu</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li><a href=#counting-lives>Counting Lives</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>09. Enable Main Menu</h1><p>We have already seen the in-game menu that you get for free in FXGL. There is also a
+<span class=links>
+<a href=/mazela-man-web/>Home</a> > 09. Enable Main Menu
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#counting-lives>Counting Lives</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+</div>
+<div id=body-inner>
+<h1>
+09. Enable Main Menu
+</h1>
+<p>We have already seen the in-game menu that you get for free in FXGL. There is also a
 main menu that is displayed when the app starts, but it is not enabled by default. We
 will enable the main menu, and also add functionality to return to the main menu after
-a game has finished.</p><p>Enabling the main menu is as easy as a single line in <code>initSettings</code>. Check out the
+a game has finished.</p>
+<p>Enabling the main menu is as easy as a single line in <code>initSettings</code>. Check out the
 <code>GameSettings</code> class for other settings you can set, for example the seed for the
-random number generator.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    settings<span style=color:#f92672>.</span><span style=color:#a6e22e>setMainMenuEnabled</span><span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>);</span>
-</code></pre></div><p>If you start the application now, it will begin by displaying the main menu.</p><p><img src=https://dykstrom.github.io/mazela-man-web/images/09/main-menu.png alt="Main Menu"></p><h3 id=counting-lives>Counting Lives</h3><p>We want to return to the main menu when the game is over. The game can end in two ways.
+random number generator.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    settings<span style=color:#f92672>.</span><span style=color:#a6e22e>setMainMenuEnabled</span><span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>);</span>
+</code></pre></div><p>If you start the application now, it will begin by displaying the main menu.</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/images/09/main-menu.png alt="Main Menu"></p>
+<h3 id=counting-lives>Counting Lives</h3>
+<p>We want to return to the main menu when the game is over. The game can end in two ways.
 Either the player runs out of lives, or the player finishes the last level. To implement
 the first, we need to keep track of the number of lives left. That means a new game
 variable that we initialize in <code>initGameVars</code>, a new UI label that we create in <code>initUI</code>,
-and some counting in a collision handler.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    vars<span style=color:#f92672>.</span><span style=color:#a6e22e>put</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;lives&#34;</span><span style=color:#f92672>,</span> 3<span style=color:#f92672>);</span>
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    Label livesLabel <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Label<span style=color:#f92672>();</span>
+and some counting in a collision handler.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    vars<span style=color:#f92672>.</span><span style=color:#a6e22e>put</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;lives&#34;</span><span style=color:#f92672>,</span> 3<span style=color:#f92672>);</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    Label livesLabel <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Label<span style=color:#f92672>();</span>
     livesLabel<span style=color:#f92672>.</span><span style=color:#a6e22e>setTextFill</span><span style=color:#f92672>(</span>Color<span style=color:#f92672>.</span><span style=color:#a6e22e>LIGHTGRAY</span><span style=color:#f92672>);</span>
     livesLabel<span style=color:#f92672>.</span><span style=color:#a6e22e>setFont</span><span style=color:#f92672>(</span>Font<span style=color:#f92672>.</span><span style=color:#a6e22e>font</span><span style=color:#f92672>(</span>20<span style=color:#f92672>.</span><span style=color:#a6e22e>0</span><span style=color:#f92672>));</span>
     livesLabel<span style=color:#f92672>.</span><span style=color:#a6e22e>textProperty</span><span style=color:#f92672>().</span><span style=color:#a6e22e>bind</span><span style=color:#f92672>(</span>FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>getip</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;lives&#34;</span><span style=color:#f92672>).</span><span style=color:#a6e22e>asString</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Lives: %d&#34;</span><span style=color:#f92672>));</span>
     FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>addUINode</span><span style=color:#f92672>(</span>livesLabel<span style=color:#f92672>,</span> 640<span style=color:#f92672>,</span> 10<span style=color:#f92672>);</span>
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    physics<span style=color:#f92672>.</span><span style=color:#a6e22e>addCollisionHandler</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> CollisionHandler<span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>PLAYER</span><span style=color:#f92672>,</span> EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>GHOST</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    physics<span style=color:#f92672>.</span><span style=color:#a6e22e>addCollisionHandler</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> CollisionHandler<span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>PLAYER</span><span style=color:#f92672>,</span> EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>GHOST</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         <span style=color:#a6e22e>@Override</span>
         <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onCollisionBegin</span><span style=color:#f92672>(</span>Entity player<span style=color:#f92672>,</span> Entity ghost<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
             FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>play</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;death.wav&#34;</span><span style=color:#f92672>);</span>
@@ -38,28 +185,33 @@ and some counting in a collision handler.</p><div class=highlight><pre style=col
 </code></pre></div><p>Now, when the player collides with a ghost, we decrease the number of lives. If there
 are still lives left, we respawn the player and ghosts like before. If the number
 of lives has reached 0, we instead call the <code>gameOver</code> method that we will create
-shortly.</p><p>However, we will first make some changes to the code handling levels. We want to call
+shortly.</p>
+<p>However, we will first make some changes to the code handling levels. We want to call
 the <code>gameOver</code> method also when the player has finished the last level. We could create
 a constant that holds the number of levels in the game, but then we would have to update
 that constant whenever we add a new level. Instead, we settle for a more dynamic option
 to catch the exception that is thrown when the next level is not found. Now we can just
-create a new level file, and the game will automatically use that level.</p><p>Instead of calling <code>setLevelFromMap</code> directly from <code>initLevel</code>, we call a new method
-<code>setLevelFromMapOrGameOver</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>initLevel</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+create a new level file, and the game will automatically use that level.</p>
+<p>Instead of calling <code>setLevelFromMap</code> directly from <code>initLevel</code>, we call a new method
+<code>setLevelFromMapOrGameOver</code>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>initLevel</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
         FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>spawn</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Background&#34;</span><span style=color:#f92672>,</span> <span style=color:#66d9ef>new</span> SpawnData<span style=color:#f92672>(</span>0<span style=color:#f92672>,</span> 0<span style=color:#f92672>).</span><span style=color:#a6e22e>put</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;width&#34;</span><span style=color:#f92672>,</span> WIDTH<span style=color:#f92672>).</span><span style=color:#a6e22e>put</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;height&#34;</span><span style=color:#f92672>,</span> HEIGHT<span style=color:#f92672>));</span>
-        FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>setLevelFromMapOrGameOver</span><span style=color:#f92672>();</span>
+        setLevelFromMapOrGameOver<span style=color:#f92672>();</span>
         <span style=color:#75715e>// Store the number of pills on this level
 </span><span style=color:#75715e></span>        FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>set</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;pills&#34;</span><span style=color:#f92672>,</span> FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>getGameWorld</span><span style=color:#f92672>().</span><span style=color:#a6e22e>getEntitiesByType</span><span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>PILL</span><span style=color:#f92672>).</span><span style=color:#a6e22e>size</span><span style=color:#f92672>());</span>
     <span style=color:#f92672>}</span>
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setLevelFromMapOrGameOver</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setLevelFromMapOrGameOver</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
         <span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
-            setLevelFromMap<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;level&#34;</span> <span style=color:#f92672>+</span> FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>geti</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;level&#34;</span><span style=color:#f92672>)</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;.tmx&#34;</span><span style=color:#f92672>);</span>
+            FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>setLevelFromMap</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;level&#34;</span> <span style=color:#f92672>+</span> FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>geti</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;level&#34;</span><span style=color:#f92672>)</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;.tmx&#34;</span><span style=color:#f92672>);</span>
         <span style=color:#f92672>}</span> <span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>IllegalArgumentException e<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
             gameOver<span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>);</span>
         <span style=color:#f92672>}</span>
     <span style=color:#f92672>}</span>
 </code></pre></div><p>The exception we can catch is <code>IllegalArgumentException</code> which is a bit unspecific,
 but it will have to do. If we catch the exception, we also call the <code>gameOver</code> method,
-but this time with parameter <code>true</code>.</p><p>In the <code>gameOver</code> method we display a message dialog before returning to the main menu.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>gameOver</span><span style=color:#f92672>(</span><span style=color:#66d9ef>boolean</span> reachedEndOfGame<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+but this time with parameter <code>true</code>.</p>
+<p>In the <code>gameOver</code> method we display a message dialog before returning to the main menu.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>gameOver</span><span style=color:#f92672>(</span><span style=color:#66d9ef>boolean</span> reachedEndOfGame<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         StringBuilder builder <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> StringBuilder<span style=color:#f92672>();</span>
         builder<span style=color:#f92672>.</span><span style=color:#a6e22e>append</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Game Over!\n\n&#34;</span><span style=color:#f92672>);</span>
         <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>reachedEndOfGame<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
@@ -79,6 +231,34 @@ like input dialogs, error dialogs, and progress dialogs. The <code>showMessageBo
 take two input parameters. The first is the text to display, and the second is a <code>Runnable</code>
 to run when the player clicks the OK button. In our case, the runnable we provide gets the
 <code>GameController</code> from the facade, and tells it to go to the main menu. The <code>GameController</code>
-can also do much more, like pausing the game engine or display a loading screen.</p><p>Running the game again, and running out of lives, will now produce something like this:</p><p><img src=https://dykstrom.github.io/mazela-man-web/images/09/game-over.png alt="Game Over"></p><p>This is the end of this chapter. Now you can proceed to the
-<a href=https://dykstrom.github.io/mazela-man-web/10_end_of_tutorial/>next chapter</a>, which currently is the end of the tutorial.</p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/mazela-man-web/08_adding_sound/ title="08. Adding Sound"><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/mazela-man-web/10_end_of_tutorial/ title="10. End of Tutorial" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/mazela-man-web/js/clipboard.min.js?1617459080></script><script src=/mazela-man-web/js/perfect-scrollbar.min.js?1617459080></script><script src=/mazela-man-web/js/perfect-scrollbar.jquery.min.js?1617459080></script><script src=/mazela-man-web/js/jquery.sticky.js?1617459080></script><script src=/mazela-man-web/js/featherlight.min.js?1617459080></script><script src=/mazela-man-web/js/highlight.pack.js?1617459080></script><script>hljs.initHighlightingOnLoad()</script><script src=/mazela-man-web/js/modernizr.custom-3.6.0.js?1617459080></script><script src=/mazela-man-web/js/learn.js?1617459080></script><script src=/mazela-man-web/js/hugo-learn.js?1617459080></script><script src=/mazela-man-web/mermaid/mermaid.js?1617459080></script><script>mermaid.initialize({startOnLoad:!0})</script></body></html>
+can also do much more, like pausing the game engine or display a loading screen.</p>
+<p>Running the game again, and running out of lives, will now produce something like this:</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/images/09/game-over.png alt="Game Over"></p>
+<p>This is the end of this chapter. Now you can proceed to the
+<a href=https://dykstrom.github.io/mazela-man-web/10_end_of_tutorial/>next chapter</a>, which currently is the end of the tutorial.</p>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/mazela-man-web/08_adding_sound/ title="08. Adding Sound"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/mazela-man-web/10_end_of_tutorial/ title="10. End of Tutorial" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/mazela-man-web/js/clipboard.min.js?1641396862></script>
+<script src=/mazela-man-web/js/perfect-scrollbar.min.js?1641396862></script>
+<script src=/mazela-man-web/js/perfect-scrollbar.jquery.min.js?1641396862></script>
+<script src=/mazela-man-web/js/jquery.sticky.js?1641396862></script>
+<script src=/mazela-man-web/js/featherlight.min.js?1641396862></script>
+<script src=/mazela-man-web/js/highlight.pack.js?1641396862></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/mazela-man-web/js/modernizr.custom-3.6.0.js?1641396862></script>
+<script src=/mazela-man-web/js/learn.js?1641396862></script>
+<script src=/mazela-man-web/js/hugo-learn.js?1641396862></script>
+<script src=/mazela-man-web/mermaid/mermaid.js?1641396862></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>

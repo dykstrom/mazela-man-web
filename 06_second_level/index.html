@@ -1,23 +1,177 @@
-<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.82.0"><meta name=description content="Tutorial website for FXGL"><meta name=author content="Mazela-Man"><link rel=icon href=/mazela-man-web/assets/favicon.ico type=image/ico><title>06. A Second Level - Mazela-Man FXGL Tutorial</title><link href=/mazela-man-web/css/nucleus.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/fontawesome-all.min.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/hybrid.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/featherlight.min.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/perfect-scrollbar.min.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/auto-complete.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/atom-one-dark-reasonable.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/theme.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/hugo-theme.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/theme-red.css?1617459080 rel=stylesheet><script src=/mazela-man-web/js/jquery-3.3.1.min.js?1617459080></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/mazela-man-web/06_second_level/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=https://dykstrom.github.io/mazela-man-web/home/><img src=https://dykstrom.github.io/mazela-man-web/images/07/cherries-live.png></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<!doctype html><html lang=en class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.91.2">
+<meta name=description content="Tutorial website for FXGL">
+<meta name=author content="Mazela-Man">
+<link rel=icon href=/mazela-man-web/assets/favicon.ico type=image/ico>
+<title>06. A Second Level - Mazela-Man FXGL Tutorial</title>
+<link href=/mazela-man-web/css/nucleus.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/fontawesome-all.min.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/hybrid.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/featherlight.min.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/perfect-scrollbar.min.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/auto-complete.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/atom-one-dark-reasonable.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/theme.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/hugo-theme.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/theme-red.css?1641396862 rel=stylesheet>
+<script src=/mazela-man-web/js/jquery-3.3.1.min.js?1641396862></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/mazela-man-web/06_second_level/>
+<nav id=sidebar>
+<div id=header-wrapper>
+<div id=header>
+<a id=logo href=https://dykstrom.github.io/mazela-man-web/home/>
+<img src=https://dykstrom.github.io/mazela-man-web/images/07/cherries-live.png>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/mazela-man-web/js/lunr.min.js?1617459080></script><script type=text/javascript src=/mazela-man-web/js/auto-complete.js?1617459080></script><script type=text/javascript>var baseurl="https://dykstrom.github.io/mazela-man-web/"</script><script type=text/javascript src=/mazela-man-web/js/search.js?1617459080></script></div><div class=highlightable><ul class=topics><li data-nav-id=/mazela-man-web/home/ title=Mazela-Man class=dd-item><a href=/mazela-man-web/home/>Mazela-Man</a></li><li data-nav-id=/mazela-man-web/introduction/ title=Introduction class=dd-item><a href=/mazela-man-web/introduction/>Introduction</a></li><li data-nav-id=/mazela-man-web/01_handling_input/ title="01. Handling Input" class=dd-item><a href=/mazela-man-web/01_handling_input/>01. Handling Input</a></li><li data-nav-id=/mazela-man-web/02_physics/ title="02. Physics" class=dd-item><a href=/mazela-man-web/02_physics/>02. Physics</a></li><li data-nav-id=/mazela-man-web/03_eating_and_keeping_score/ title="03. Eating and Keeping Score" class=dd-item><a href=/mazela-man-web/03_eating_and_keeping_score/>03. Eating and Keeping Score</a></li><li data-nav-id=/mazela-man-web/04_animation/ title="04. Animation" class=dd-item><a href=/mazela-man-web/04_animation/>04. Animation</a></li><li data-nav-id=/mazela-man-web/05_adding_enemies/ title="05. Adding Enemies" class=dd-item><a href=/mazela-man-web/05_adding_enemies/>05. Adding Enemies</a></li><li data-nav-id=/mazela-man-web/06_second_level/ title="06. A Second Level" class="dd-item
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/mazela-man-web/js/lunr.min.js?1641396862></script>
+<script type=text/javascript src=/mazela-man-web/js/auto-complete.js?1641396862></script>
+<script type=text/javascript>var baseurl="https://dykstrom.github.io/mazela-man-web/"</script>
+<script type=text/javascript src=/mazela-man-web/js/search.js?1641396862></script>
+</div>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/mazela-man-web/home/ title=Mazela-Man class=dd-item>
+<a href=/mazela-man-web/home/>
+Mazela-Man
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/introduction/ title=Introduction class=dd-item>
+<a href=/mazela-man-web/introduction/>
+Introduction
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/01_handling_input/ title="01. Handling Input" class=dd-item>
+<a href=/mazela-man-web/01_handling_input/>
+01. Handling Input
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/02_physics/ title="02. Physics" class=dd-item>
+<a href=/mazela-man-web/02_physics/>
+02. Physics
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/03_eating_and_keeping_score/ title="03. Eating and Keeping Score" class=dd-item>
+<a href=/mazela-man-web/03_eating_and_keeping_score/>
+03. Eating and Keeping Score
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/04_animation/ title="04. Animation" class=dd-item>
+<a href=/mazela-man-web/04_animation/>
+04. Animation
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/05_adding_enemies/ title="05. Adding Enemies" class=dd-item>
+<a href=/mazela-man-web/05_adding_enemies/>
+05. Adding Enemies
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/06_second_level/ title="06. A Second Level" class="dd-item
 parent
-active"><a href=/mazela-man-web/06_second_level/>06. A Second Level</a></li><li data-nav-id=/mazela-man-web/07_bonus_points/ title="07. Bonus Points" class=dd-item><a href=/mazela-man-web/07_bonus_points/>07. Bonus Points</a></li><li data-nav-id=/mazela-man-web/08_adding_sound/ title="08. Adding Sound" class=dd-item><a href=/mazela-man-web/08_adding_sound/>08. Adding Sound</a></li><li data-nav-id=/mazela-man-web/09_enable_main_menu/ title="09. Enable Main Menu" class=dd-item><a href=/mazela-man-web/09_enable_main_menu/>09. Enable Main Menu</a></li><li data-nav-id=/mazela-man-web/10_end_of_tutorial/ title="10. End of Tutorial" class=dd-item><a href=/mazela-man-web/10_end_of_tutorial/>10. End of Tutorial</a></li></ul><section id=footer><p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
+active">
+<a href=/mazela-man-web/06_second_level/>
+06. A Second Level
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/07_bonus_points/ title="07. Bonus Points" class=dd-item>
+<a href=/mazela-man-web/07_bonus_points/>
+07. Bonus Points
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/08_adding_sound/ title="08. Adding Sound" class=dd-item>
+<a href=/mazela-man-web/08_adding_sound/>
+08. Adding Sound
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/09_enable_main_menu/ title="09. Enable Main Menu" class=dd-item>
+<a href=/mazela-man-web/09_enable_main_menu/>
+09. Enable Main Menu
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/10_end_of_tutorial/ title="10. End of Tutorial" class=dd-item>
+<a href=/mazela-man-web/10_end_of_tutorial/>
+10. End of Tutorial
+</a>
+</li>
+</ul>
+<section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
-<span class=links><a href=/mazela-man-web/>Home</a> > 06. A Second Level</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li><a href=#designing-the-level>Designing the Level</a></li><li><a href=#start-level>Start Level</a></li><li><a href=#counting-pills>Counting Pills</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>06. A Second Level</h1><p>Adding a second level to the game involves mostly work with designing the level in Tiled.
+<span class=links>
+<a href=/mazela-man-web/>Home</a> > 06. A Second Level
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#designing-the-level>Designing the Level</a></li>
+<li><a href=#start-level>Start Level</a></li>
+<li><a href=#counting-pills>Counting Pills</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+</div>
+<div id=body-inner>
+<h1>
+06. A Second Level
+</h1>
+<p>Adding a second level to the game involves mostly work with designing the level in Tiled.
 In addition to that, we also need to do some work in the code to keep track of the pills
-eaten and the current level.</p><h3 id=designing-the-level>Designing the Level</h3><p>To design a new level, it is probably easiest to copy your existing level and update it.
+eaten and the current level.</p>
+<h3 id=designing-the-level>Designing the Level</h3>
+<p>To design a new level, it is probably easiest to copy your existing level and update it.
 Redesign the maze in any way you like, position the player, the ghost(s), and the pills
-by creating objects with type and name. Name the new level file &ldquo;level2.tmx&rdquo;.</p><p>If you don&rsquo;t feel like doing all that work in Tiled, you can copy a ready-made
+by creating objects with type and name. Name the new level file &ldquo;level2.tmx&rdquo;.</p>
+<p>If you don&rsquo;t feel like doing all that work in Tiled, you can copy a ready-made
 <a href=https://github.com/dykstrom/mazela-man/blob/main/07-chapter-7/src/main/resources/assets/levels>level2.tmx</a> file. The maze
-in this file looks like this:</p><p><img src=https://dykstrom.github.io/mazela-man-web/images/06/level2.png alt="Level 2"></p><p>The Player object is the highlighted object close to the bottom.</p><p>If you added any new ghosts to the new level, you will have to copy the textures for
+in this file looks like this:</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/images/06/level2.png alt="Level 2"></p>
+<p>The Player object is the highlighted object close to the bottom.</p>
+<p>If you added any new ghosts to the new level, you will have to copy the textures for
 them to the textures folder. All available resources can be found in the main
-<a href=https://github.com/dykstrom/mazela-man/tree/main/resources>resources</a> folder. I added &ldquo;pinky&rdquo;, who looks like this:</p><p><img src=https://dykstrom.github.io/mazela-man-web/resources/pinky-left.png alt="Pinky Left">
+<a href=https://github.com/dykstrom/mazela-man/tree/main/resources>resources</a> folder. I added &ldquo;pinky&rdquo;, who looks like this:</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/resources/pinky-left.png alt="Pinky Left">
 <img src=https://dykstrom.github.io/mazela-man-web/resources/pinky-right.png alt="Pinky Right">
-<img src=https://dykstrom.github.io/mazela-man-web/resources/pinky-up-down.png alt="Pinky UpDown"></p><h3 id=start-level>Start Level</h3><p>To make it easier to test the game, we will add a command line argument to specify the
-start level. Then we can easily start playing on level 2 to test that level.</p><p>There are libraries for handling command line arguments, but we will make it as easy as
+<img src=https://dykstrom.github.io/mazela-man-web/resources/pinky-up-down.png alt="Pinky UpDown"></p>
+<h3 id=start-level>Start Level</h3>
+<p>To make it easier to test the game, we will add a command line argument to specify the
+start level. Then we can easily start playing on level 2 to test that level.</p>
+<p>There are libraries for handling command line arguments, but we will make it as easy as
 possible here, and parse a single optional argument ourselves. We add a static variable
-to save the start level, and make a small addition to the main method.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>int</span> startLevel <span style=color:#f92672>=</span> 1<span style=color:#f92672>;</span>
+to save the start level, and make a small addition to the main method.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>int</span> startLevel <span style=color:#f92672>=</span> 1<span style=color:#f92672>;</span>
 
     <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>args<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span> <span style=color:#f92672>&gt;</span> 0<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
@@ -28,7 +182,8 @@ to save the start level, and make a small addition to the main method.</p><div c
 </code></pre></div><p>We save the current level as a game variable, and create a new method that initializes a
 level. The <code>initGame</code> method now calls <code>initLevel</code> instead of initializing the level itself.
 The <code>geti</code> method is again a convenience method in class <code>FXGL</code> for getting the value of an
-integer game variable.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#a6e22e>@Override</span>
+integer game variable.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#a6e22e>@Override</span>
     <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>initGameVars</span><span style=color:#f92672>(</span>Map<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>,</span> Object<span style=color:#f92672>&gt;</span> vars<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         vars<span style=color:#f92672>.</span><span style=color:#a6e22e>put</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;level&#34;</span><span style=color:#f92672>,</span> startLevel<span style=color:#f92672>);</span>
         vars<span style=color:#f92672>.</span><span style=color:#a6e22e>put</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;score&#34;</span><span style=color:#f92672>,</span> 0<span style=color:#f92672>);</span>
@@ -48,20 +203,24 @@ integer game variable.</p><div class=highlight><pre style=color:#f8f8f2;backgrou
 for a new label. This is very similar to the score label. We create a JavaFX label, set some
 properties, and bind its text property to the property of the level game variable. In the
 bind call we also transform the level property of type <code>Integer</code> to a text property of type
-<code>String</code>. Finally, we add the label as a node at a specified position.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    Label levelLabel <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Label<span style=color:#f92672>();</span>
+<code>String</code>. Finally, we add the label as a node at a specified position.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    Label levelLabel <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Label<span style=color:#f92672>();</span>
     levelLabel<span style=color:#f92672>.</span><span style=color:#a6e22e>setTextFill</span><span style=color:#f92672>(</span>Color<span style=color:#f92672>.</span><span style=color:#a6e22e>LIGHTGRAY</span><span style=color:#f92672>);</span>
     levelLabel<span style=color:#f92672>.</span><span style=color:#a6e22e>setFont</span><span style=color:#f92672>(</span>Font<span style=color:#f92672>.</span><span style=color:#a6e22e>font</span><span style=color:#f92672>(</span>20<span style=color:#f92672>.</span><span style=color:#a6e22e>0</span><span style=color:#f92672>));</span>
     levelLabel<span style=color:#f92672>.</span><span style=color:#a6e22e>textProperty</span><span style=color:#f92672>().</span><span style=color:#a6e22e>bind</span><span style=color:#f92672>(</span>FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>getip</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;level&#34;</span><span style=color:#f92672>).</span><span style=color:#a6e22e>asString</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Level: %d&#34;</span><span style=color:#f92672>));</span>
     FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>addUINode</span><span style=color:#f92672>(</span>levelLabel<span style=color:#f92672>,</span> 720<span style=color:#f92672>,</span> 10<span style=color:#f92672>);</span>
-</code></pre></div><h3 id=counting-pills>Counting Pills</h3><p>We want the player to progress to the next level, when all pills have been eaten. Since
+</code></pre></div><h3 id=counting-pills>Counting Pills</h3>
+<p>We want the player to progress to the next level, when all pills have been eaten. Since
 we don&rsquo;t know from the start how many they are, we have to count them. Let&rsquo;s do this in
 the <code>initLevel</code> method after we have loaded the level. We simply get all entities of type
-<code>PILL</code>, count them, and store the result in a game variable.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#75715e>// Store the number of pills on this level
+<code>PILL</code>, count them, and store the result in a game variable.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#75715e>// Store the number of pills on this level
 </span><span style=color:#75715e></span>    FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>set</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;pills&#34;</span><span style=color:#f92672>,</span> FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>getGameWorld</span><span style=color:#f92672>().</span><span style=color:#a6e22e>getEntitiesByType</span><span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>PILL</span><span style=color:#f92672>).</span><span style=color:#a6e22e>size</span><span style=color:#f92672>());</span>
 </code></pre></div><p>Next, we modify the player-pill collision handler to decrease the number of pills each
 time the player eats a pill. There is no <code>dec</code> convenience method, so instead we increase
 the number of pills with -1. If the number of remaining pills has reached 0, we start the
-next level.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#a6e22e>@Override</span>
+next level.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#a6e22e>@Override</span>
     <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onCollisionBegin</span><span style=color:#f92672>(</span>Entity player<span style=color:#f92672>,</span> Entity pill<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         pill<span style=color:#f92672>.</span><span style=color:#a6e22e>removeFromWorld</span><span style=color:#f92672>();</span>
         FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>inc</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;score&#34;</span><span style=color:#f92672>,</span> 10<span style=color:#f92672>);</span>
@@ -74,7 +233,36 @@ next level.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#2
 </code></pre></div><p>The call to <code>initLevel</code> is enclosed in a call to <code>Platform.runLater</code>. This is done to
 let the current event handler finish executing before we delete the current scene and
 replace it with something entirely different. <code>Platform</code> is a JavaFX class, and the same
-technique is used when working with events in JavaFX applications.</p><p>The observant reader has by now figured out that the game will crash when the player
+technique is used when working with events in JavaFX applications.</p>
+<p>The observant reader has by now figured out that the game will crash when the player
 has made it through level 2. Don&rsquo;t worry! We will fix that issue in
-<a href=https://dykstrom.github.io/mazela-man-web/09_enable_main_menu/>chapter 9</a>.</p><p>Adding a new level is done. This is how my level design look in action.</p><p><img src=https://dykstrom.github.io/mazela-man-web/images/06/level2-live.png alt="Level 2 Live"></p><p>Now proceed to the <a href=https://dykstrom.github.io/mazela-man-web/07_bonus_points/>next chapter</a></p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/mazela-man-web/05_adding_enemies/ title="05. Adding Enemies"><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/mazela-man-web/07_bonus_points/ title="07. Bonus Points" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/mazela-man-web/js/clipboard.min.js?1617459080></script><script src=/mazela-man-web/js/perfect-scrollbar.min.js?1617459080></script><script src=/mazela-man-web/js/perfect-scrollbar.jquery.min.js?1617459080></script><script src=/mazela-man-web/js/jquery.sticky.js?1617459080></script><script src=/mazela-man-web/js/featherlight.min.js?1617459080></script><script src=/mazela-man-web/js/highlight.pack.js?1617459080></script><script>hljs.initHighlightingOnLoad()</script><script src=/mazela-man-web/js/modernizr.custom-3.6.0.js?1617459080></script><script src=/mazela-man-web/js/learn.js?1617459080></script><script src=/mazela-man-web/js/hugo-learn.js?1617459080></script><script src=/mazela-man-web/mermaid/mermaid.js?1617459080></script><script>mermaid.initialize({startOnLoad:!0})</script></body></html>
+<a href=https://dykstrom.github.io/mazela-man-web/09_enable_main_menu/>chapter 9</a>.</p>
+<p>Adding a new level is done. This is how my level design look in action.</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/images/06/level2-live.png alt="Level 2 Live"></p>
+<p>Now proceed to the <a href=https://dykstrom.github.io/mazela-man-web/07_bonus_points/>next chapter</a></p>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/mazela-man-web/05_adding_enemies/ title="05. Adding Enemies"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/mazela-man-web/07_bonus_points/ title="07. Bonus Points" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/mazela-man-web/js/clipboard.min.js?1641396862></script>
+<script src=/mazela-man-web/js/perfect-scrollbar.min.js?1641396862></script>
+<script src=/mazela-man-web/js/perfect-scrollbar.jquery.min.js?1641396862></script>
+<script src=/mazela-man-web/js/jquery.sticky.js?1641396862></script>
+<script src=/mazela-man-web/js/featherlight.min.js?1641396862></script>
+<script src=/mazela-man-web/js/highlight.pack.js?1641396862></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/mazela-man-web/js/modernizr.custom-3.6.0.js?1641396862></script>
+<script src=/mazela-man-web/js/learn.js?1641396862></script>
+<script src=/mazela-man-web/js/hugo-learn.js?1641396862></script>
+<script src=/mazela-man-web/mermaid/mermaid.js?1641396862></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>

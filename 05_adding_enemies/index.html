@@ -1,23 +1,182 @@
-<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.82.0"><meta name=description content="Tutorial website for FXGL"><meta name=author content="Mazela-Man"><link rel=icon href=/mazela-man-web/assets/favicon.ico type=image/ico><title>05. Adding Enemies - Mazela-Man FXGL Tutorial</title><link href=/mazela-man-web/css/nucleus.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/fontawesome-all.min.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/hybrid.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/featherlight.min.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/perfect-scrollbar.min.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/auto-complete.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/atom-one-dark-reasonable.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/theme.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/hugo-theme.css?1617459080 rel=stylesheet><link href=/mazela-man-web/css/theme-red.css?1617459080 rel=stylesheet><script src=/mazela-man-web/js/jquery-3.3.1.min.js?1617459080></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/mazela-man-web/05_adding_enemies/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=https://dykstrom.github.io/mazela-man-web/home/><img src=https://dykstrom.github.io/mazela-man-web/images/07/cherries-live.png></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<!doctype html><html lang=en class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.91.2">
+<meta name=description content="Tutorial website for FXGL">
+<meta name=author content="Mazela-Man">
+<link rel=icon href=/mazela-man-web/assets/favicon.ico type=image/ico>
+<title>05. Adding Enemies - Mazela-Man FXGL Tutorial</title>
+<link href=/mazela-man-web/css/nucleus.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/fontawesome-all.min.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/hybrid.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/featherlight.min.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/perfect-scrollbar.min.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/auto-complete.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/atom-one-dark-reasonable.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/theme.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/hugo-theme.css?1641396862 rel=stylesheet>
+<link href=/mazela-man-web/css/theme-red.css?1641396862 rel=stylesheet>
+<script src=/mazela-man-web/js/jquery-3.3.1.min.js?1641396862></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/mazela-man-web/05_adding_enemies/>
+<nav id=sidebar>
+<div id=header-wrapper>
+<div id=header>
+<a id=logo href=https://dykstrom.github.io/mazela-man-web/home/>
+<img src=https://dykstrom.github.io/mazela-man-web/images/07/cherries-live.png>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/mazela-man-web/js/lunr.min.js?1617459080></script><script type=text/javascript src=/mazela-man-web/js/auto-complete.js?1617459080></script><script type=text/javascript>var baseurl="https://dykstrom.github.io/mazela-man-web/"</script><script type=text/javascript src=/mazela-man-web/js/search.js?1617459080></script></div><div class=highlightable><ul class=topics><li data-nav-id=/mazela-man-web/home/ title=Mazela-Man class=dd-item><a href=/mazela-man-web/home/>Mazela-Man</a></li><li data-nav-id=/mazela-man-web/introduction/ title=Introduction class=dd-item><a href=/mazela-man-web/introduction/>Introduction</a></li><li data-nav-id=/mazela-man-web/01_handling_input/ title="01. Handling Input" class=dd-item><a href=/mazela-man-web/01_handling_input/>01. Handling Input</a></li><li data-nav-id=/mazela-man-web/02_physics/ title="02. Physics" class=dd-item><a href=/mazela-man-web/02_physics/>02. Physics</a></li><li data-nav-id=/mazela-man-web/03_eating_and_keeping_score/ title="03. Eating and Keeping Score" class=dd-item><a href=/mazela-man-web/03_eating_and_keeping_score/>03. Eating and Keeping Score</a></li><li data-nav-id=/mazela-man-web/04_animation/ title="04. Animation" class=dd-item><a href=/mazela-man-web/04_animation/>04. Animation</a></li><li data-nav-id=/mazela-man-web/05_adding_enemies/ title="05. Adding Enemies" class="dd-item
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/mazela-man-web/js/lunr.min.js?1641396862></script>
+<script type=text/javascript src=/mazela-man-web/js/auto-complete.js?1641396862></script>
+<script type=text/javascript>var baseurl="https://dykstrom.github.io/mazela-man-web/"</script>
+<script type=text/javascript src=/mazela-man-web/js/search.js?1641396862></script>
+</div>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/mazela-man-web/home/ title=Mazela-Man class=dd-item>
+<a href=/mazela-man-web/home/>
+Mazela-Man
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/introduction/ title=Introduction class=dd-item>
+<a href=/mazela-man-web/introduction/>
+Introduction
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/01_handling_input/ title="01. Handling Input" class=dd-item>
+<a href=/mazela-man-web/01_handling_input/>
+01. Handling Input
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/02_physics/ title="02. Physics" class=dd-item>
+<a href=/mazela-man-web/02_physics/>
+02. Physics
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/03_eating_and_keeping_score/ title="03. Eating and Keeping Score" class=dd-item>
+<a href=/mazela-man-web/03_eating_and_keeping_score/>
+03. Eating and Keeping Score
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/04_animation/ title="04. Animation" class=dd-item>
+<a href=/mazela-man-web/04_animation/>
+04. Animation
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/05_adding_enemies/ title="05. Adding Enemies" class="dd-item
 parent
-active"><a href=/mazela-man-web/05_adding_enemies/>05. Adding Enemies</a></li><li data-nav-id=/mazela-man-web/06_second_level/ title="06. A Second Level" class=dd-item><a href=/mazela-man-web/06_second_level/>06. A Second Level</a></li><li data-nav-id=/mazela-man-web/07_bonus_points/ title="07. Bonus Points" class=dd-item><a href=/mazela-man-web/07_bonus_points/>07. Bonus Points</a></li><li data-nav-id=/mazela-man-web/08_adding_sound/ title="08. Adding Sound" class=dd-item><a href=/mazela-man-web/08_adding_sound/>08. Adding Sound</a></li><li data-nav-id=/mazela-man-web/09_enable_main_menu/ title="09. Enable Main Menu" class=dd-item><a href=/mazela-man-web/09_enable_main_menu/>09. Enable Main Menu</a></li><li data-nav-id=/mazela-man-web/10_end_of_tutorial/ title="10. End of Tutorial" class=dd-item><a href=/mazela-man-web/10_end_of_tutorial/>10. End of Tutorial</a></li></ul><section id=footer><p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
+active">
+<a href=/mazela-man-web/05_adding_enemies/>
+05. Adding Enemies
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/06_second_level/ title="06. A Second Level" class=dd-item>
+<a href=/mazela-man-web/06_second_level/>
+06. A Second Level
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/07_bonus_points/ title="07. Bonus Points" class=dd-item>
+<a href=/mazela-man-web/07_bonus_points/>
+07. Bonus Points
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/08_adding_sound/ title="08. Adding Sound" class=dd-item>
+<a href=/mazela-man-web/08_adding_sound/>
+08. Adding Sound
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/09_enable_main_menu/ title="09. Enable Main Menu" class=dd-item>
+<a href=/mazela-man-web/09_enable_main_menu/>
+09. Enable Main Menu
+</a>
+</li>
+<li data-nav-id=/mazela-man-web/10_end_of_tutorial/ title="10. End of Tutorial" class=dd-item>
+<a href=/mazela-man-web/10_end_of_tutorial/>
+10. End of Tutorial
+</a>
+</li>
+</ul>
+<section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
-<span class=links><a href=/mazela-man-web/>Home</a> > 05. Adding Enemies</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li><a href=#position-enemies-on-the-map>Position Enemies on the Map</a></li><li><a href=#adding-images>Adding Images</a></li><li><a href=#entity-factory>Entity Factory</a></li><li><a href=#ghostcomponent>GhostComponent</a></li><li><a href=#adding-ai>Adding AI</a></li><li><a href=#collision-detection>Collision Detection</a></li><li><a href=#player-ghost-collisions>Player-Ghost Collisions</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>05. Adding Enemies</h1><p>Our current game is not much of a challenge. We can make it harder by adding an enemy or two.
+<span class=links>
+<a href=/mazela-man-web/>Home</a> > 05. Adding Enemies
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#position-enemies-on-the-map>Position Enemies on the Map</a></li>
+<li><a href=#adding-images>Adding Images</a></li>
+<li><a href=#entity-factory>Entity Factory</a></li>
+<li><a href=#ghostcomponent>GhostComponent</a></li>
+<li><a href=#adding-ai>Adding AI</a></li>
+<li><a href=#collision-detection>Collision Detection</a></li>
+<li><a href=#player-ghost-collisions>Player-Ghost Collisions</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+</div>
+<div id=body-inner>
+<h1>
+05. Adding Enemies
+</h1>
+<p>Our current game is not much of a challenge. We can make it harder by adding an enemy or two.
 This will involve more design in Tiled, adding new images, creating a new component with some
-very limited AI, and creating new collision handlers.</p><h3 id=position-enemies-on-the-map>Position Enemies on the Map</h3><p>We begin our work in Tiled as usual. It is also possible to copy the finished
+very limited AI, and creating new collision handlers.</p>
+<h3 id=position-enemies-on-the-map>Position Enemies on the Map</h3>
+<p>We begin our work in Tiled as usual. It is also possible to copy the finished
 <a href=https://github.com/dykstrom/mazela-man/blob/main/06-chapter-6/src/main/resources/assets/levels>level file</a> from the next level
 as usual. Otherwise, open the level file for the current chapter in Tiled, and add an enemy
 object. You can of course add any number of enemies, but I will settle for one, given the
-design of my level.</p><p><img src=https://dykstrom.github.io/mazela-man-web/images/05/tiled-blinky.png alt=Blinky></p><p>The new object has a little name tag above it. The enemy objects need names to keep them
+design of my level.</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/images/05/tiled-blinky.png alt=Blinky></p>
+<p>The new object has a little name tag above it. The enemy objects need names to keep them
 apart. We will use the name later when loading textures for the enemy entity. You enter the
 name, as well as the type, in the Tiled property editor. For reasons unknown, I have chosen
-to call this object &ldquo;blinky&rdquo;.</p><p><img src=https://dykstrom.github.io/mazela-man-web/images/05/blinky-properties.png alt="Blinky Properties"></p><h3 id=adding-images>Adding Images</h3><p>The images we will use for enemy blinky look like this:</p><p><img src=https://dykstrom.github.io/mazela-man-web/resources/blinky-left.png alt=Left>
+to call this object &ldquo;blinky&rdquo;.</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/images/05/blinky-properties.png alt="Blinky Properties"></p>
+<h3 id=adding-images>Adding Images</h3>
+<p>The images we will use for enemy blinky look like this:</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/resources/blinky-left.png alt=Left>
 <img src=https://dykstrom.github.io/mazela-man-web/resources/blinky-right.png alt=Right>
-<img src=https://dykstrom.github.io/mazela-man-web/resources/blinky-up-down.png alt=Up-Down></p><p>Copy them to the textures folder from the main <a href=https://github.com/dykstrom/mazela-man/tree/main/resources>resources</a> folder. If you
+<img src=https://dykstrom.github.io/mazela-man-web/resources/blinky-up-down.png alt=Up-Down></p>
+<p>Copy them to the textures folder from the main <a href=https://github.com/dykstrom/mazela-man/tree/main/resources>resources</a> folder. If you
 want more than one enemy, we have you covered. The resources folder also contains images
-for pinky, inky, and clyde.</p><h3 id=entity-factory>Entity Factory</h3><p>Next we want to create a spawn method for enemies. In the <code>MazelaManFactory</code>, we add:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#a6e22e>@Spawns</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Ghost&#34;</span><span style=color:#f92672>)</span>
+for pinky, inky, and clyde.</p>
+<h3 id=entity-factory>Entity Factory</h3>
+<p>Next we want to create a spawn method for enemies. In the <code>MazelaManFactory</code>, we add:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#a6e22e>@Spawns</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Ghost&#34;</span><span style=color:#f92672>)</span>
     <span style=color:#66d9ef>public</span> Entity <span style=color:#a6e22e>spawnGhost</span><span style=color:#f92672>(</span>SpawnData data<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         <span style=color:#66d9ef>return</span> FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>entityBuilder</span><span style=color:#f92672>(</span>data<span style=color:#f92672>)</span>
                 <span style=color:#f92672>.</span><span style=color:#a6e22e>type</span><span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>GHOST</span><span style=color:#f92672>)</span>
@@ -28,9 +187,12 @@ for pinky, inky, and clyde.</p><h3 id=entity-factory>Entity Factory</h3><p>Next 
     <span style=color:#f92672>}</span>
 </code></pre></div><p>Here we build a collidable entity of type <code>GHOST</code> (which must be added to the <code>EntityType</code> enum)
 with a <code>GhostComponent</code>. When creating the <code>GhostComponent</code> instance, we provide it with parts of
-the spawn data entered in Tiled. Our next task will be to create the <code>GhostComponent</code> class.</p><h3 id=ghostcomponent>GhostComponent</h3><p>We already know how a component class should look. It should inherit <code>Component</code>, and if it
+the spawn data entered in Tiled. Our next task will be to create the <code>GhostComponent</code> class.</p>
+<h3 id=ghostcomponent>GhostComponent</h3>
+<p>We already know how a component class should look. It should inherit <code>Component</code>, and if it
 handles the entity view, it should add a texture in the <code>onAdded</code> callback method. Here we use
-the name of the enemy to load the correct images.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GhostComponent</span> <span style=color:#66d9ef>extends</span> Component <span style=color:#f92672>{</span>
+the name of the enemy to load the correct images.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GhostComponent</span> <span style=color:#66d9ef>extends</span> Component <span style=color:#f92672>{</span>
 
     <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> String name<span style=color:#f92672>;</span>
     <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> x<span style=color:#f92672>;</span>
@@ -54,8 +216,12 @@ the name of the enemy to load the correct images.</p><div class=highlight><pre s
         entity<span style=color:#f92672>.</span><span style=color:#a6e22e>getViewComponent</span><span style=color:#f92672>().</span><span style=color:#a6e22e>addChild</span><span style=color:#f92672>(</span>upDown<span style=color:#f92672>);</span>
     <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
-</code></pre></div><p>Running the game now will provide us with a nice, albeit very static enemy.</p><p><img src=https://dykstrom.github.io/mazela-man-web/images/05/static-blinky.png alt="Static Blinky"></p><h3 id=adding-ai>Adding AI</h3><p>To make blinky move, we will add an update method, and very limited AI. By overriding the
-<code>onUpdate</code> method, we can move the ghost entity a little every frame.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> SPEED <span style=color:#f92672>=</span> 100<span style=color:#f92672>.</span><span style=color:#a6e22e>0</span><span style=color:#f92672>;</span>
+</code></pre></div><p>Running the game now will provide us with a nice, albeit very static enemy.</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/images/05/static-blinky.png alt="Static Blinky"></p>
+<h3 id=adding-ai>Adding AI</h3>
+<p>To make blinky move, we will add an update method, and very limited AI. By overriding the
+<code>onUpdate</code> method, we can move the ghost entity a little every frame.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> SPEED <span style=color:#f92672>=</span> 100<span style=color:#f92672>.</span><span style=color:#a6e22e>0</span><span style=color:#f92672>;</span>
 
     <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>double</span> dx <span style=color:#f92672>=</span> 0<span style=color:#f92672>.</span><span style=color:#a6e22e>0</span><span style=color:#f92672>;</span>
     <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>double</span> dy <span style=color:#f92672>=</span> <span style=color:#f92672>-</span>SPEED<span style=color:#f92672>;</span>
@@ -67,14 +233,21 @@ the name of the enemy to load the correct images.</p><div class=highlight><pre s
     <span style=color:#f92672>}</span>
 </code></pre></div><p>You may have noted that we did not set any <code>PhysicsComponent</code> on the ghost entity. Therefore,
 the ghost entity is not controlled by the physics engine. Instead, we control it ourselves
-by calling the translate methods.</p><p>The argument to the onUpdate method, <code>tpf</code>, means &ldquo;time per frame&rdquo;. That is the amount of
+by calling the translate methods.</p>
+<p>The argument to the onUpdate method, <code>tpf</code>, means &ldquo;time per frame&rdquo;. That is the amount of
 time in seconds that is spent on each frame and will vary depending on the speed of the
-computer. Dividing 1 by the time per frame gives the number of frames per second, or FPS.</p><p>The time per frame can be used to make an entity move with a constant speed independent of
+computer. Dividing 1 by the time per frame gives the number of frames per second, or FPS.</p>
+<p>The time per frame can be used to make an entity move with a constant speed independent of
 the speed of the computer. By multiplying <code>dx</code> and <code>dy</code> with <code>tpf</code>, we will move the entity at
 a constant speed even if the FPS varies. And the FPS <em>will</em> vary depending on what else
-happens in the game, and depending on when the Java just-in-time compiler kicks in.</p><p>Now our enemy will move, but only in one direction, and as the player before, it will move
-through the walls.</p><p><img src=https://dykstrom.github.io/mazela-man-web/images/05/blinky-outside.png alt="Blinky Outside"></p><h3 id=collision-detection>Collision Detection</h3><p>The player and the enemies are already collidable, but the walls are not. A small update
-to the <code>spawnWall</code> method fixes that.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#a6e22e>@Spawns</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Wall&#34;</span><span style=color:#f92672>)</span>
+happens in the game, and depending on when the Java just-in-time compiler kicks in.</p>
+<p>Now our enemy will move, but only in one direction, and as the player before, it will move
+through the walls.</p>
+<p><img src=https://dykstrom.github.io/mazela-man-web/images/05/blinky-outside.png alt="Blinky Outside"></p>
+<h3 id=collision-detection>Collision Detection</h3>
+<p>The player and the enemies are already collidable, but the walls are not. A small update
+to the <code>spawnWall</code> method fixes that.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#a6e22e>@Spawns</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Wall&#34;</span><span style=color:#f92672>)</span>
     <span style=color:#66d9ef>public</span> Entity <span style=color:#a6e22e>spawnWall</span><span style=color:#f92672>(</span>SpawnData data<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         <span style=color:#66d9ef>return</span> FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>entityBuilder</span><span style=color:#f92672>(</span>data<span style=color:#f92672>)</span>
                 <span style=color:#f92672>.</span><span style=color:#a6e22e>type</span><span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>WALL</span><span style=color:#f92672>)</span>
@@ -83,7 +256,8 @@ to the <code>spawnWall</code> method fixes that.</p><div class=highlight><pre st
                 <span style=color:#f92672>.</span><span style=color:#a6e22e>collidable</span><span style=color:#f92672>()</span>
                 <span style=color:#f92672>.</span><span style=color:#a6e22e>build</span><span style=color:#f92672>();</span>
     <span style=color:#f92672>}</span>
-</code></pre></div><p>Next, we add a collision handler for a ghost and a wall. In <code>initPhysics</code>, we add:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    physics<span style=color:#f92672>.</span><span style=color:#a6e22e>addCollisionHandler</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> CollisionHandler<span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>GHOST</span><span style=color:#f92672>,</span> EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>WALL</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</code></pre></div><p>Next, we add a collision handler for a ghost and a wall. In <code>initPhysics</code>, we add:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    physics<span style=color:#f92672>.</span><span style=color:#a6e22e>addCollisionHandler</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> CollisionHandler<span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>GHOST</span><span style=color:#f92672>,</span> EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>WALL</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         <span style=color:#a6e22e>@Override</span>
         <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onCollisionBegin</span><span style=color:#f92672>(</span>Entity ghost<span style=color:#f92672>,</span> Entity wall<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
             ghost<span style=color:#f92672>.</span><span style=color:#a6e22e>getComponent</span><span style=color:#f92672>(</span>GhostComponent<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>).</span><span style=color:#a6e22e>turn</span><span style=color:#f92672>();</span>
@@ -92,7 +266,8 @@ to the <code>spawnWall</code> method fixes that.</p><div class=highlight><pre st
 </code></pre></div><p>Again, the order of the constructor arguments to <code>CollisionHandler</code> decides the order of the
 arguments to the callback method <code>onCollisionBegin</code>. The new collision handler gets the
 <code>GhostComponent</code> and calls a method turn on it. So we return to the <code>GhostComponent</code>, and
-create the <code>turn</code> method and its helper method <code>getRandomSpeedAndDirection</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> Random RANDOM <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Random<span style=color:#f92672>();</span>
+create the <code>turn</code> method and its helper method <code>getRandomSpeedAndDirection</code>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> Random RANDOM <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Random<span style=color:#f92672>();</span>
 
     <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>turn</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
         <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>dx <span style=color:#f92672>&lt;</span> 0<span style=color:#f92672>.</span><span style=color:#a6e22e>0</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
@@ -132,7 +307,8 @@ create the <code>turn</code> method and its helper method <code>getRandomSpeedAn
 </code></pre></div><p>There seems to be much going on here, but in reality we are just doing almost the same thing
 for a number of different cases. The first if-else statement has to do with changing the
 direction of the entity by setting <code>dx</code> and <code>dy</code> to new values. The second if-else statement
-changes the view of the entity depending on the direction it moves.</p><p>The logic of the first if-else statement is <em>if the entity is moving left or right, it
+changes the view of the entity depending on the direction it moves.</p>
+<p>The logic of the first if-else statement is <em>if the entity is moving left or right, it
 will randomly turn up or down, and if the entity is moving up or down, it will randomly
 turn left or right</em>. That is all there is to the AI of the ghosts in this implementation.
 &ldquo;But wait, you say, what about the entity.translateX(2) and similar statements?&rdquo; Yes,
@@ -144,12 +320,16 @@ just change direction and move on, the collision will still be going on, which w
 problems with the next collision. To avoid that, we move the entity back two pixels in
 the direction it came from, which ends the collision. This does not feel like an optimal
 solution, but it is some kind of solution. Probably, the real solution is to use the physics
-engine for ghost-wall collisions as well&mldr;</p><p>The second if-else statement does not contain any mysteries. Depending on the direction
+engine for ghost-wall collisions as well&mldr;</p>
+<p>The second if-else statement does not contain any mysteries. Depending on the direction
 the entity is now travelling we add the correct texture to the view, after first removing
-the old texture to avoid having duplicate textures in the view.</p><h3 id=player-ghost-collisions>Player-Ghost Collisions</h3><p>Hopefully, the ghost or ghosts can now move around in the maze, but we also want to
+the old texture to avoid having duplicate textures in the view.</p>
+<h3 id=player-ghost-collisions>Player-Ghost Collisions</h3>
+<p>Hopefully, the ghost or ghosts can now move around in the maze, but we also want to
 detect collisions between the player and a ghost. In case of a player-ghost collection,
 both entities should respawn at their original locations. The <code>GhostComponent</code> already
-knows its original location, but the <code>PlayerComponent</code> must be updated to know that too.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> x<span style=color:#f92672>;</span>
+knows its original location, but the <code>PlayerComponent</code> must be updated to know that too.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> x<span style=color:#f92672>;</span>
     <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> y<span style=color:#f92672>;</span>
     
     <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>PlayerComponent</span><span style=color:#f92672>(</span><span style=color:#66d9ef>double</span> x<span style=color:#f92672>,</span> <span style=color:#66d9ef>double</span> y<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
@@ -158,9 +338,11 @@ knows its original location, but the <code>PlayerComponent</code> must be update
         <span style=color:#f92672>...</span>
     <span style=color:#f92672>}</span>
 </code></pre></div><p>The <code>spawnPlayer</code> method must also be updated to provide the constructor with x and y
-like the <code>spawnGhost</code> method already does.</p><p>We can now add methods to respawn entities in both <code>PlayerComponent</code> and <code>GhostComponent</code>.
+like the <code>spawnGhost</code> method already does.</p>
+<p>We can now add methods to respawn entities in both <code>PlayerComponent</code> and <code>GhostComponent</code>.
 Respawning is as easy as removing the entity from the world and spawning it again using
-the saved location, and, in the case of ghosts, the saved name.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>PlayerComponent</span> <span style=color:#66d9ef>extends</span> Component <span style=color:#f92672>{</span>
+the saved location, and, in the case of ghosts, the saved name.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>PlayerComponent</span> <span style=color:#66d9ef>extends</span> Component <span style=color:#f92672>{</span>
     
     <span style=color:#f92672>...</span>
     
@@ -169,7 +351,7 @@ the saved location, and, in the case of ghosts, the saved name.</p><div class=hi
         FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>spawn</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Player&#34;</span><span style=color:#f92672>,</span> <span style=color:#66d9ef>new</span> SpawnData<span style=color:#f92672>(</span>x<span style=color:#f92672>,</span> y<span style=color:#f92672>));</span>
     <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GhostComponent</span> <span style=color:#66d9ef>extends</span> Component <span style=color:#f92672>{</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GhostComponent</span> <span style=color:#66d9ef>extends</span> Component <span style=color:#f92672>{</span>
 
     <span style=color:#f92672>...</span>
     
@@ -179,7 +361,8 @@ the saved location, and, in the case of ghosts, the saved name.</p><div class=hi
     <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><p>The final step is adding a collision handler that handles player-ghost collisions. In
-<code>initPhysics</code> we add:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    physics<span style=color:#f92672>.</span><span style=color:#a6e22e>addCollisionHandler</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> CollisionHandler<span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>PLAYER</span><span style=color:#f92672>,</span> EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>GHOST</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+<code>initPhysics</code> we add:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    physics<span style=color:#f92672>.</span><span style=color:#a6e22e>addCollisionHandler</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> CollisionHandler<span style=color:#f92672>(</span>EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>PLAYER</span><span style=color:#f92672>,</span> EntityType<span style=color:#f92672>.</span><span style=color:#a6e22e>GHOST</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         <span style=color:#a6e22e>@Override</span>
         <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onCollisionBegin</span><span style=color:#f92672>(</span>Entity player<span style=color:#f92672>,</span> Entity ghost<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
         FXGL<span style=color:#f92672>.</span><span style=color:#a6e22e>getGameWorld</span><span style=color:#f92672>()</span>
@@ -193,6 +376,32 @@ making all ghosts return to their original locations. Here we get all entities o
 <code>GHOST</code>, but there are many more ways to get entities from the game world. For example, you
 can get the closest entity to a point, or all entities within an area. You can also get
 all entities that satisfy a predicate. All depends on the type of game you are working
-on.</p><p>That&rsquo;s all for this chapter. In the <a href=https://dykstrom.github.io/mazela-man-web/06_second_level/>next chapter</a> we will add
-a second level to the game.</p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/mazela-man-web/04_animation/ title="04. Animation"><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/mazela-man-web/06_second_level/ title="06. A Second Level" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/mazela-man-web/js/clipboard.min.js?1617459080></script><script src=/mazela-man-web/js/perfect-scrollbar.min.js?1617459080></script><script src=/mazela-man-web/js/perfect-scrollbar.jquery.min.js?1617459080></script><script src=/mazela-man-web/js/jquery.sticky.js?1617459080></script><script src=/mazela-man-web/js/featherlight.min.js?1617459080></script><script src=/mazela-man-web/js/highlight.pack.js?1617459080></script><script>hljs.initHighlightingOnLoad()</script><script src=/mazela-man-web/js/modernizr.custom-3.6.0.js?1617459080></script><script src=/mazela-man-web/js/learn.js?1617459080></script><script src=/mazela-man-web/js/hugo-learn.js?1617459080></script><script src=/mazela-man-web/mermaid/mermaid.js?1617459080></script><script>mermaid.initialize({startOnLoad:!0})</script></body></html>
+on.</p>
+<p>That&rsquo;s all for this chapter. In the <a href=https://dykstrom.github.io/mazela-man-web/06_second_level/>next chapter</a> we will add
+a second level to the game.</p>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/mazela-man-web/04_animation/ title="04. Animation"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/mazela-man-web/06_second_level/ title="06. A Second Level" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/mazela-man-web/js/clipboard.min.js?1641396862></script>
+<script src=/mazela-man-web/js/perfect-scrollbar.min.js?1641396862></script>
+<script src=/mazela-man-web/js/perfect-scrollbar.jquery.min.js?1641396862></script>
+<script src=/mazela-man-web/js/jquery.sticky.js?1641396862></script>
+<script src=/mazela-man-web/js/featherlight.min.js?1641396862></script>
+<script src=/mazela-man-web/js/highlight.pack.js?1641396862></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/mazela-man-web/js/modernizr.custom-3.6.0.js?1641396862></script>
+<script src=/mazela-man-web/js/learn.js?1641396862></script>
+<script src=/mazela-man-web/js/hugo-learn.js?1641396862></script>
+<script src=/mazela-man-web/mermaid/mermaid.js?1641396862></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>
